@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "lint": "eslint",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -11,6 +12,10 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongodb": "^3.6.0",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0"
   }
 }
