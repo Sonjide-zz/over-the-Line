@@ -9,9 +9,9 @@ Target Audience - publicly available.
 #### Team members
 
 - Project manager -  Sonjide Hussain 
-- Front-End Developer - Alexandru Budaca
-- Front-End Developer - Alexey Brambalov
-- Back-end Developer - Serkan Cavus 
+- Front-End Developer - [Alexandru Budaca](https://github.com/AlexandruBudaca)
+- Front-End Developer - [Alexey Brambalov](https://github.com/AlexeyBrambalov)
+- Back-end Developer - [Serkan Cavus](https://github.com/SCavus) 
 - Product Manager - Neha Datt
 - Technical Assistant #1 - Gerald(aka dahfool)
 - Technical Assistant #2 - Esme Hotston Moore
