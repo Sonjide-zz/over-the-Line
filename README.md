@@ -15,7 +15,7 @@ Target Audience - publicly available.
 - Product Manager - Neha Datt
 - Technical Assistant #1 - [Gerald(aka dahfool)](https://github.com/dahfool)
 - Technical Assistant #2 - [Esme Hotston Moore](https://github.com/esmehm)
-- UI/UX Designer - Zach Pinfold
+- UI/UX Designer - [Zach Pinfold](https://github.com/ZachPinfold)
 
 #### Resources
 
