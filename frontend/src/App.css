@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -10,4 +11,62 @@
   width: 100%;
   text-align: center;
   padding: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.h1-over-the-line:hover {
+  transform: scale(1.1);
+}
+
+#about {
+  height: 100vh;
+}
+
+.navbar {
+  background-color: red;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu {
+  margin-right: 10rem;
+  color: whitesmoke;
+}
+.boubles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.bouble {
+  background-color: teal;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.bouble2 {
+  background-color: yellowgreen;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bouble3 {
+  background-color: palevioletred;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
