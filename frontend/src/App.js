@@ -1,15 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
-// import { Router, Switch, Route } from "react-router-dom";
+import HomePage from './components/HomePage/HomePage'
+import ArtistsPage from "./components/ArtistsPage/ArtistsPage";
+import ArtistPage from "./components/ArtistPage/ArtistPage";
+import ProductPage from "./components/ProductPage/ProductPage";
+import ProductsPage from "./components/ProductsPage/ProductsPage";
 
 function App() {
+
+  const [categories, setCategories] = useState([])
   return (
     <>
-      <div className="App">
+      <HomePage/>
+      <ArtistsPage setCategories={setCategories}/>
+      <ArtistPage categories={categories}/>
+      <ProductsPage/>
+      <ProductPage/>
+
+
+
+
+
+
+
+      {/* <div className="App">
         <a href="#about" className="h1-over-the-line">
-          {/* <Router> */}
-          {/* <Switch><Route path="/" exact component={} /></Switch> */}
-          {/* </Router> */}
+
           <h1>Over the line</h1>
         </a>
       </div>
@@ -32,7 +48,7 @@ function App() {
             <h1>Writing</h1>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
