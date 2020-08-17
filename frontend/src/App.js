@@ -1,4 +1,9 @@
+
 import React, { useState } from "react";
+
+import React from "react";
+import logo from "./logo.svg";
+
 import "./App.css";
 import { HomePage } from "./components/HomePage/HomePage";
 import { ArtistsPage } from "./components/ArtistsPage/ArtistsPage";
