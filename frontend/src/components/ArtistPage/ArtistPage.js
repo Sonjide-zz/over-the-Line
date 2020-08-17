@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const ArtistPage = ({ categories, setCategory }) => {
   const classNamePicker = (object) => {
@@ -27,4 +28,8 @@ export const ArtistPage = ({ categories, setCategory }) => {
       </div>
     </div>
   );
+};
+
+ArtistPage.propTypes = {
+  categories: PropTypes.array,
 };

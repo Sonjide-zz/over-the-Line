@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const ProductsPage = ({ category }) => {
   const classNamePicker = (object) => {
@@ -26,4 +27,8 @@ export const ProductsPage = ({ category }) => {
       </div>
     </div>
   );
+};
+
+ProductsPage.propTypes = {
+  category: PropTypes.object,
 };

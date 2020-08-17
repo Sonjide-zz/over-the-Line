@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import products from "../../assets/products.json";
+import PropTypes from "prop-types";
 
 export const ArtistsPage = ({ setCategories }) => {
   const colorsArray = ["blue", "yellow", "orange"];
@@ -36,4 +37,8 @@ export const ArtistsPage = ({ setCategories }) => {
       </div>
     </div>
   );
+};
+
+ArtistsPage.propTypes = {
+  colorsArray: PropTypes.array,
 };
