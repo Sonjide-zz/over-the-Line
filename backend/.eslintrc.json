@@ -8,9 +8,9 @@
   "parserOptions": {
     "ecmaVersion": 11
   },
+
+  "plugins": ["prettier"],
   "rules": {
-    "indent": ["error", 2],
-    "quotes": ["warn", "double"],
-    "no-console": "off",
+    "prettier/prettier": "error"
   }
 }
