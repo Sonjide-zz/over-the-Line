@@ -13,8 +13,6 @@ export const ProductsPage = ({ category }) => {
 
   const categoryName = Object.keys(category)[0];
 
-  console.log(categoryName);
-
   return (
     <div className="artist-page">
       <div className="section-line"></div>
