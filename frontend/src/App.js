@@ -1,8 +1,4 @@
-
 import React, { useState } from "react";
-
-import React from "react";
-import logo from "./logo.svg";
 
 import "./App.css";
 import { HomePage } from "./components/HomePage/HomePage";
@@ -13,12 +9,13 @@ import { ProductsPage } from "./components/ProductsPage/ProductsPage";
 
 function App() {
   const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState({});
   return (
     <>
       <HomePage />
       <ArtistsPage setCategories={setCategories} />
-      <ArtistPage categories={categories} />
-      <ProductsPage />
+      <ArtistPage categories={categories} setCategory={setCategory} />
+      <ProductsPage category={category} />
       <ProductPage />
     </>
   );
