@@ -1,17 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { classNamePicker } from "../../utils";
 
 export const ProductsPage = ({ category }) => {
-  const classNamePicker = (object) => {
-    if (object.toString() === "writing") {
-      return "blue";
-    } else if (object.toString() === "acting") {
-      return "orange";
-    } else {
-      return "yellow";
-    }
-  };
-
   const categoryName = Object.keys(category)[0];
 
   return (
