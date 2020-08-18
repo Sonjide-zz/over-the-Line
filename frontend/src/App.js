@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { HomePage } from "./components/HomePage/HomePage";
 import { ArtistsPage } from "./components/ArtistsPage/ArtistsPage";
-import { ArtistPage } from "./components/ArtistPage/ArtistPage";
+import { SingleArtistPage } from "./components/SingleArtistPage/SingleArtistPage";
 import { ProductPage } from "./components/ProductPage/ProductPage";
 import { ProductsPage } from "./components/ProductsPage/ProductsPage";
 
@@ -14,7 +14,7 @@ function App() {
     <>
       <HomePage />
       <ArtistsPage setCategories={setCategories} />
-      <ArtistPage categories={categories} setCategory={setCategory} />
+      <SingleArtistPage categories={categories} setCategory={setCategory} />
       <ProductsPage category={category} />
       <ProductPage />
     </>

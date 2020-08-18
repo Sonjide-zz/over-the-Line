@@ -1,10 +1,10 @@
 :root {
-  --main-bg-color: #D73919;
-  --main-white: #FFF;
+  --main-bg-color: #d73919;
+  --main-white: #fff;
   --main-black: #000;
 }
 
-.homepage{
+.homepage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,11 @@
   color: var(--main-black);
 }
 
+.h1-link {
+  width: 100%;
+  text-decoration-line: none;
+}
+
 .h1-over-the-line:hover {
   text-decoration: none;
   color: var(--main-black);
@@ -28,32 +33,45 @@
   transition-duration: 0.5s;
 }
 
-.navbar-bg-color{
+.navbar-bg-color {
   background-color: var(--main-bg-color);
 }
 
-.main-white{
-  color: var(--main-white)
+.main-white {
+  color: var(--main-white);
 }
 
-#logo{
+#logo {
   margin: 0;
 }
 
-.logo{
+.logo {
   border: solid white;
 }
 
-.artists-page{
+/* multiple-artist page */
+
+.element {
+  margin-top: 100px;
   height: 100vh;
 }
 
-.artists-main{
-  height: 100%;
+.artists-main {
+  height: 80vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
-
-.yellow{
+/* bubbles */
+.bubbles-link-artists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-black);
+}
+.yellow {
   background-color: yellow;
   width: 150px;
   height: 150px;
@@ -63,7 +81,7 @@
   justify-content: center;
 }
 
-.blue{
+.blue {
   background-color: blue;
   width: 150px;
   height: 150px;
@@ -73,7 +91,7 @@
   justify-content: center;
 }
 
-.orange{
+.orange {
   background-color: orange;
   width: 150px;
   height: 150px;
@@ -84,19 +102,14 @@
 }
 
 /*
-  Artist page
+  single artist page
 */
 
-.artist-page{
- height: 100vh;
-}
-
-.section-line{
+.section-line {
   width: 100%;
   height: 5vh;
   background-color: var(--main-bg-color);
 }
-
 
 /* .App {
   display: flex;
