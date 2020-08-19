@@ -10,13 +10,15 @@ import { ProductsPage } from "./components/ProductsPage/ProductsPage";
 function App() {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState({});
+  const [product, setProduct] = useState({});
+
   return (
     <>
       <HomePage />
       <ArtistsPage setCategories={setCategories} />
       <SingleArtistPage categories={categories} setCategory={setCategory} />
-      <ProductsPage category={category} />
-      <ProductPage />
+      <ProductsPage category={category} setProduct={setProduct} />
+      <ProductPage product={product} />
     </>
   );
 }

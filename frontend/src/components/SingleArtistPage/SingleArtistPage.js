@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Element } from "react-scroll";
+import { Link, Element } from "react-scroll";
 
 export const SingleArtistPage = ({ categories, setCategory }) => {
   const classNamePicker = (object) => {
@@ -19,13 +19,20 @@ export const SingleArtistPage = ({ categories, setCategory }) => {
         <div className="section-line"></div>
         <div className="artists-main d-flex justify-content-center align-items-center">
           {categories.map((category, index) => (
-            <div
-              key={index}
-              className={classNamePicker(category)}
+            <Link
               onClick={(e) => setCategory(category)}
+              className="bubbles-link-artists"
+              activeClass="active"
+              to="products"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1500}
             >
-              {Object.keys(category)}
-            </div>
+              <div key={index} className={classNamePicker(category)}>
+                {Object.keys(category)}
+              </div>
+            </Link>
           ))}
         </div>
       </div>
