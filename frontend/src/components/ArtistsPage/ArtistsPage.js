@@ -3,14 +3,7 @@ import { Navbar } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import products from "../../assets/products.json";
 import PropTypes from "prop-types";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link, Element } from "react-scroll";
 
 export const ArtistsPage = ({ setCategories }) => {
   const colorsArray = ["blue", "yellow", "orange"];
