@@ -120,3 +120,24 @@
   height: 5vh;
   background-color: var(--main-bg-color);
 }
+
+/* single product-page */
+.product-container-info ul {
+  display: flex;
+  padding: 20px;
+}
+
+.product-container-info ul li {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.artist-name {
+  height: 100px;
+}
+.artist-info {
+  height: 300px;
+}
+.artist-social-media {
+  height: 100px;
+}
