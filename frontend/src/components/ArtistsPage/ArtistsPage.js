@@ -5,8 +5,11 @@ import products from "../../assets/products.json";
 import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 
-export const ArtistsPage = ({ setCategories }) => {
+export const ArtistsPage = React.memo(function ArtistsPage({ setCategories }) {
   const colorsArray = ["blue", "yellow", "orange"];
+  const colorsPicker = () => {
+    return colorsArray[Math.floor(Math.random() * (2 + 1))];
+  };
 
   return (
     <Element name="artists" className="element">
@@ -38,20 +41,16 @@ export const ArtistsPage = ({ setCategories }) => {
               smooth={true}
               offset={0}
               duration={1500}
+              key={index}
             >
-              <div
-                key={index}
-                className={colorsArray[Math.floor(Math.random() * (2 + 1))]}
-              >
-                {product.name}
-              </div>
+              <div className={colorsPicker()}>{product.name}</div>
             </Link>
           ))}
         </div>
       </div>
     </Element>
   );
-};
+});
 
 ArtistsPage.propTypes = {
   colorsArray: PropTypes.array,

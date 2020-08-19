@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import products from "./assets/products.json";
 import "./App.css";
 import { HomePage } from "./components/HomePage/HomePage";
 import { ArtistsPage } from "./components/ArtistsPage/ArtistsPage";
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       <HomePage />
-      <ArtistsPage setCategories={setCategories} />
+      <ArtistsPage setCategories={setCategories} products={products} />
       <SingleArtistPage categories={categories} setCategory={setCategory} />
       <ProductsPage category={category} setProduct={setProduct} />
       <ProductPage product={product} />

@@ -28,8 +28,9 @@ export const SingleArtistPage = ({ categories, setCategory }) => {
               smooth={true}
               offset={0}
               duration={1500}
+              key={index}
             >
-              <div key={index} className={classNamePicker(category)}>
+              <div className={classNamePicker(category)}>
                 {Object.keys(category)}
               </div>
             </Link>

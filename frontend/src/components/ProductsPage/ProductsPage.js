@@ -18,12 +18,13 @@ export const ProductsPage = ({ category, setProduct }) => {
                 className="bubbles-link-artists"
                 activeClass="active"
                 to="product"
+                key={index}
                 spy={true}
                 smooth={true}
                 offset={0}
                 duration={1500}
               >
-                <div key={index} className={classNamePicker(categoryName)}>
+                <div className={classNamePicker(categoryName)}>
                   <div key={index} className={classNamePicker(category)}>
                     {product.title}
                   </div>
