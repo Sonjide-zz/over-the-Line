@@ -1,17 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { classNamePicker } from "../../utils";
 
 export const ArtistPage = ({ categories, setCategory }) => {
-  const classNamePicker = (object) => {
-    if (Object.keys(object).toString() === "writing") {
-      return "blue";
-    } else if (Object.keys(object).toString() === "acting") {
-      return "orange";
-    } else {
-      return "yellow";
-    }
-  };
-
   return (
     <div className="artist-page">
       <div className="section-line"></div>
@@ -19,7 +10,7 @@ export const ArtistPage = ({ categories, setCategory }) => {
         {categories.map((category, index) => (
           <div
             key={index}
-            className={classNamePicker(category)}
+            className={classNamePicker(Object.keys(category))}
             onClick={(e) => setCategory(category)}
           >
             {Object.keys(category)}
