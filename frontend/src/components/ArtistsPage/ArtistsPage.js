@@ -1,57 +1,46 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
-import logo from "../../assets/logo.png";
-import products from "../../assets/products.json";
 import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
+import artists from "../../assets/products.json";
+import { NavBar } from "../NavBar/NavBar";
+import { Footer } from "../Footer/Footer";
+import { classNamePicker } from "../../utils";
 
-export const ArtistsPage = React.memo(function ArtistsPage({ setCategories }) {
-  const colorsArray = ["blue", "yellow", "orange"];
-  const colorsPicker = () => {
-    return colorsArray[Math.floor(Math.random() * (2 + 1))];
-  };
+export const ArtistsPage = ({ category, setArtist }) => {
+  let filteredArray = artists.filter((artist) =>
+    artist.category.some((cat) => cat.hasOwnProperty(category))
+  );
 
   return (
-    <Element name="artists" className="element">
-      <div className="artists-page">
-        <Navbar className="navbar-bg-color main-white">
-          <Navbar.Brand className="col-2" id="logo">
-            <img
-              alt="Logo"
-              src={logo}
-              width="60"
-              height="40"
-              className="d-inline-block align-top logo"
-            />
-          </Navbar.Brand>
-          <div className="text-center col-8 text">
-            <h1>Over the line</h1>
+    <>
+      <Element name="artist" className="element">
+        <div className="artist-page">
+          <NavBar />
+          <div className="artists-main d-flex justify-content-center align-items-center">
+            {category &&
+              filteredArray.map((artist, index) => (
+                <Link
+                  onClick={(e) => setArtist(artist)}
+                  className="bubbles-link-artists"
+                  activeClass="active"
+                  to="products"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1500}
+                  key={index}
+                >
+                  <div className={classNamePicker(category)}>{artist.name}</div>
+                </Link>
+              ))}
           </div>
-          <div className="col-2">contact</div>
-        </Navbar>
-
-        <div className="artists-main">
-          {products.map((product, index) => (
-            <Link
-              onClick={(e) => setCategories(product.category)}
-              className="bubbles-link-artists"
-              activeClass="active"
-              to="artist"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1500}
-              key={index}
-            >
-              <div className={colorsPicker()}>{product.name}</div>
-            </Link>
-          ))}
         </div>
-      </div>
-    </Element>
+      </Element>
+      <Footer />
+    </>
   );
-});
+};
 
 ArtistsPage.propTypes = {
-  colorsArray: PropTypes.array,
+  category: PropTypes.string,
 };

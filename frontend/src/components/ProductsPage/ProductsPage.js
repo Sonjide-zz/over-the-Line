@@ -2,41 +2,43 @@ import React from "react";
 import PropTypes from "prop-types";
 import { classNamePicker } from "../../utils";
 import { Link, Element } from "react-scroll";
+import { NavBar } from "../NavBar/NavBar";
+import { Footer } from "../Footer/Footer";
 
-export const ProductsPage = ({ category, setProduct }) => {
-  const categoryName = Object.keys(category)[0];
-
+export const ProductsPage = ({ category, artist, setProduct }) => {
   return (
     <Element name="products" className="element">
       <div className="artist-page">
-        <div className="section-line"></div>
+        <NavBar />
         <div className="artists-main d-flex justify-content-center align-items-center">
-          {Object.values(category)[0] &&
-            Object.values(category)[0].map((product, index) => (
-              <Link
-                onClick={(e) => setProduct(product)}
-                className="bubbles-link-artists"
-                activeClass="active"
-                to="product"
-                key={index}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={1500}
-              >
-                <div className={classNamePicker(categoryName)}>
+          {artist.category &&
+            artist.category
+              .filter((cat) => cat.hasOwnProperty(category))[0]
+              [category].map((product, index) => (
+                <Link
+                  onClick={(e) => setProduct(product)}
+                  className="bubbles-link-artists"
+                  activeClass="active"
+                  to="product"
+                  key={index}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1500}
+                >
                   <div key={index} className={classNamePicker(category)}>
                     {product.title}
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
         </div>
+        <Footer />
       </div>
     </Element>
   );
 };
 
 ProductsPage.propTypes = {
-  category: PropTypes.object,
+  category: PropTypes.string,
+  artist: PropTypes.object,
 };
