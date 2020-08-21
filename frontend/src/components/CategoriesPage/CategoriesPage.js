@@ -2,7 +2,6 @@ import React from "react";
 
 import { NavBar } from "../NavBar/NavBar";
 import { Link, Element } from "react-scroll";
-import { Footer } from "../Footer/Footer";
 
 export const CategoriesPage = ({ setCategory }) => {
   const categoriesArray = [
@@ -33,7 +32,6 @@ export const CategoriesPage = ({ setCategory }) => {
             </Link>
           ))}
         </div>
-        <Footer />
       </div>
     </Element>
   );
