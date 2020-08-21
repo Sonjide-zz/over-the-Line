@@ -1,15 +1,16 @@
 :root {
-  --main-bg-color: #D73919;
-  --main-white: #FFF;
+  --main-bg-color: #d73919;
+  --main-white: #fff;
   --main-black: #000;
 }
 
-.homepage{
+/* homepage */
+.homepage {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 80vh;
 }
 
 .h1-over-the-line {
@@ -17,8 +18,17 @@
   width: 100%;
   text-align: center;
   padding: 10px;
-  text-decoration: none;
   color: var(--main-black);
+}
+
+.h1-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.h1-link:hover {
+  width: 100%;
+  text-decoration: none;
 }
 
 .h1-over-the-line:hover {
@@ -28,32 +38,55 @@
   transition-duration: 0.5s;
 }
 
-.navbar-bg-color{
+/* navbar */
+
+.navbar-bg-color {
   background-color: var(--main-bg-color);
 }
 
-.main-white{
-  color: var(--main-white)
+.main-white {
+  color: var(--main-white);
 }
 
-#logo{
+#logo {
   margin: 0;
 }
 
-.logo{
+.logo {
   border: solid white;
 }
 
-.artists-page{
+/* multiple-artist page */
+
+.element {
+  margin-top: 100px;
   height: 100vh;
 }
 
-.artists-main{
-  height: 100%;
+.artists-main {
+  height: 80vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
+/* bubbles */
+.bubbles-link-artists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-black);
+  cursor: pointer;
+  padding: 20px;
+}
 
-.yellow{
+.bubbles-link-artists:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.yellow {
   background-color: yellow;
   width: 150px;
   height: 150px;
@@ -63,7 +96,7 @@
   justify-content: center;
 }
 
-.blue{
+.blue {
   background-color: blue;
   width: 150px;
   height: 150px;
@@ -73,7 +106,7 @@
   justify-content: center;
 }
 
-.orange{
+.orange {
   background-color: orange;
   width: 150px;
   height: 150px;
@@ -84,89 +117,32 @@
 }
 
 /*
-  Artist page
+  single artist page
 */
 
-.artist-page{
- height: 100vh;
-}
-
-.section-line{
+.section-line {
   width: 100%;
-  height: 5vh;
+  height: 0.5vh;
   background-color: var(--main-bg-color);
 }
 
-
-/* .App {
+/* single product-page */
+.product-container-info ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
+  padding: 20px;
 }
 
-.h1-over-the-line {
-  background-color: red;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  color: whitesmoke;
+.product-container-info ul li {
+  padding: 20px;
+  list-style-type: none;
 }
 
-.h1-over-the-line:hover {
-  transform: scale(1.1);
+.artist-name {
+  height: 100px;
 }
-
-#about {
-  height: 100vh;
-}
-
-.navbar {
-  background-color: red;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.menu {
-  margin-right: 10rem;
-  color: whitesmoke;
-}
-.boubles {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-}
-.bouble {
-  background-color: teal;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-}
-.bouble2 {
-  background-color: yellowgreen;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bouble3 {
-  background-color: palevioletred;
-  width: 300px;
+.artist-info {
   height: 300px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-} */
+}
+.artist-social-media {
+  height: 100px;
+}
