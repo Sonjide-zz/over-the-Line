@@ -11,7 +11,7 @@ export const ProductPage = ({ product }) => {
             <>
               <div className="col-6 video-product">
                 <iframe
-                  title="alex"
+                  title="alex-video"
                   width="700"
                   height="500"
                   src="https://www.youtube.com/embed/LN-CXvWu90A"
