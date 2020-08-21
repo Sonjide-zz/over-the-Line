@@ -37,7 +37,6 @@ export const ProductPage = ({ product, artist }) => {
                 <Col xs={6}>
                   <div className="product-container-info">
                     <div className="artist-name">
-                      {console.log(artist)}
                       <h4>{artist.name}</h4>
                       <h5>{product.title}</h5>
                     </div>
