@@ -1,40 +1,95 @@
 import React from "react";
 import { Element } from "react-scroll";
+import { NavBar } from "../NavBar/NavBar";
+import { Footer } from "../Footer/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { Container, Row, Col } from "react-bootstrap";
 
-export const ProductPage = ({ product }) => {
+export const ProductPage = ({ product, artist }) => {
   return (
     <Element name="product" className="element">
       <div className="artist-page">
-        <div className="section-line"></div>
+        <NavBar />
         <div className="artists-main d-flex justify-content-center align-items-center">
           {Object.entries(product).length !== 0 ? (
-            <>
-              <div className="col-6 video-product">
-                <iframe
-                  title="alex-video"
-                  width="700"
-                  height="500"
-                  src="https://www.youtube.com/embed/LN-CXvWu90A"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <div className="col-3 product-container-info">
-                <div className="col-12 artist-name">{product.title}</div>
-                <div className="col-12 artist-info">Testing1</div>
-                <div className="col-12 artist-social-media">
-                  <ul>
-                    <li>facebook</li>
-                    <li>twitter</li>
-                    <li>linkedIn</li>
-                  </ul>
-                </div>
-              </div>
-            </>
+            <Container fluid="md">
+              <Row>
+                <Col>
+                  <div className="video-container">
+                    <iframe
+                      className="responsive-iframe"
+                      width="550px"
+                      height="400px"
+                      title="alex-video"
+                      src="https://www.youtube.com/embed/LN-CXvWu90A"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </Col>
+                <Col xs={6}>
+                  <div className="product-container-info">
+                    <div className="artist-name">
+                      {console.log(artist)}
+                      <h4>{artist.name}</h4>
+                      <h5>{product.title}</h5>
+                    </div>
+                    <div className=" artist-info">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </div>
+                    <div className="artist-social-media">
+                      <ul>
+                        <li>
+                          <FontAwesomeIcon
+                            icon={faFacebook}
+                            size="2x"
+                            color="red"
+                          />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon
+                            icon={faInstagram}
+                            size="2x"
+                            color="yellow"
+                          />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon
+                            icon={faTwitter}
+                            size="2x"
+                            color="aqua"
+                          />
+                        </li>
+                        <li>
+                          <FontAwesomeIcon
+                            icon={faLinkedin}
+                            size="2x"
+                            color="blue"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
           ) : null}
         </div>
       </div>
+      <Footer />
     </Element>
   );
 };
