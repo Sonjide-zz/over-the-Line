@@ -22,7 +22,7 @@ function App() {
         artist={artist}
         setProduct={setProduct}
       />
-      <ProductPage product={product} />
+      <ProductPage product={product} artist={artist} />
     </>
   );
 }
