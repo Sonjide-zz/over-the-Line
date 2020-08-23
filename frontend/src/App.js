@@ -24,8 +24,6 @@ function App() {
     )[0][category][0];
   }
 
-  console.log(artist.category && singleProduct);
-
   return (
     <>
       <HomePage />
