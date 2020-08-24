@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { classNamePicker } from "../../utils";
 import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
-import { Footer } from "../Footer/Footer";
 
 export const ProductsPage = ({ category, artist, setProduct }) => {
   return (
@@ -32,7 +31,6 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
                 </Link>
               ))}
         </div>
-        <Footer />
       </div>
     </Element>
   );

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 import artists from "../../assets/products.json";
 import { NavBar } from "../NavBar/NavBar";
-import { Footer } from "../Footer/Footer";
 import { classNamePicker } from "../../utils";
 
 export const ArtistsPage = ({ category, setArtist }) => {
@@ -36,7 +35,6 @@ export const ArtistsPage = ({ category, setArtist }) => {
           </div>
         </div>
       </Element>
-      <Footer />
     </>
   );
 };
