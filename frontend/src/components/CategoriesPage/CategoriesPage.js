@@ -3,11 +3,13 @@ import React from "react";
 import { NavBar } from "../NavBar/NavBar";
 import { Link, Element } from "react-scroll";
 
+import { categoryColorsObject } from "../../constant";
+
 export const CategoriesPage = ({ setCategory }) => {
   const categoriesArray = [
-    { title: "writing", color: "blue" },
-    { title: "acting", color: "yellow" },
-    { title: "music", color: "orange" },
+    { title: "writing", color: categoryColorsObject.blue },
+    { title: "acting", color: categoryColorsObject.orange },
+    { title: "music", color: categoryColorsObject.yellow },
   ];
 
   return (

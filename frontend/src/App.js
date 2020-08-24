@@ -12,17 +12,39 @@ function App() {
   const [product, setProduct] = useState({});
   const [artist, setArtist] = useState({});
 
+  let singleProductCheck;
+  let singleProduct;
+
+  if (artist.category) {
+    singleProductCheck = artist.category.filter((cat) =>
+      cat.hasOwnProperty(category)
+    )[0][category].length;
+    singleProduct = artist.category.filter((cat) =>
+      cat.hasOwnProperty(category)
+    )[0][category][0];
+  }
+
   return (
     <>
       <HomePage />
       <CategoriesPage setCategory={setCategory} />
       <ArtistsPage category={category} setArtist={setArtist} />
-      <ProductsPage
-        category={category}
-        artist={artist}
-        setProduct={setProduct}
-      />
-      <ProductPage product={product} artist={artist} />
+      <>
+        {singleProductCheck !== 1 && (
+          <ProductsPage
+            category={category}
+            artist={artist}
+            setProduct={setProduct}
+          />
+        )}
+      </>
+      <>
+        {singleProductCheck !== 1 ? (
+          <ProductPage product={product} artist={artist} />
+        ) : (
+          <ProductPage product={singleProduct} artist={artist} />
+        )}
+      </>
     </>
   );
 }
