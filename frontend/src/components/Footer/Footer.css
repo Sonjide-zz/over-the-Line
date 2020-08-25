@@ -2,3 +2,73 @@
   width: 100vw;
   height: 20vh;
 }
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links li {
+  list-style-type: none;
+
+}
+
+
+.footer-links li a:hover {
+  color: var(--main-bg-color);
+  text-decoration: none !important
+}
+
+.div-links {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.div-links a {
+  margin: 10px;
+  color: var(--main-black);
+  text-decoration: none !important
+}
+
+#dropdown-basic {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--main-black) !important;
+  outline: none !important;
+  margin-top: 5px;
+}
+
+#dropdown-basic:focus {
+  box-shadow: none !important
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social ul {
+  display: flex;
+}
+
+.social li {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.survey-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.survey-btn button {
+  padding: 6px 12px;
+  border: none;
+  background-color: var(--main-bg-color);
+  color: var(--main-white);
+  padding-bottom: 1px;
+}
