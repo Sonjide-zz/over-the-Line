@@ -1,12 +1,9 @@
-[
-  {
+[{
     "name": "Duru",
     "synopsis": "Very young artist",
     "bio": "I am 10 years old. I am interested in drawing, reading, writing stories and playing piano. I have a blog where I share my drawings and book reviews.",
-    "category": [
-      {
-        "writing": [
-          {
+    "category": [{
+        "writing": [{
             "id": "0",
             "title": "The Cruel School",
             "link": "https://drive.google.com/file/d/1eQ55NQrhltjFNohCG2i2C3oHNLLKvlOE/view?usp=sharing"
@@ -19,8 +16,7 @@
         ]
       },
       {
-        "acting": [
-          {
+        "acting": [{
             "id": "0",
             "title": "The Cruel School by Alice Rose",
             "link": "https://youtu.be/pTXLyJ1qHIA"
@@ -33,8 +29,7 @@
         ]
       },
       {
-        "music": [
-          {
+        "music": [{
             "id": "0",
             "title": "Can't stop the feeling",
             "link": "https://youtu.be/ru0K8uYEZWw"
@@ -52,10 +47,8 @@
     "name": "Sonjide",
     "synopsis": "This is Synopsis",
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    "category": [
-      {
-        "writing": [
-          {
+    "category": [{
+        "writing": [{
             "id": "0",
             "title": "Dummy2",
             "link": "https://drive.google.com/file/d/1Ssw1G315ZFPL5Cdr7nzTvFmflg4XwtC3/view?usp=sharing"
@@ -71,13 +64,11 @@
         "music": []
       },
       {
-        "acting": [
-          {
-            "id": "0",
-            "title": "Solving tme mystery",
-            "link": "https://youtu.be/YzNgq8itkbA"
-          }
-        ]
+        "acting": [{
+          "id": "0",
+          "title": "Solving tme mystery",
+          "link": "https://youtu.be/YzNgq8itkbA"
+        }]
       }
     ]
   },
@@ -85,27 +76,22 @@
     "name": "Alex",
     "synopsis": "This is Synopsis",
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    "category": [
-      {
-        "writing": [
-          {
-            "id": "0",
-            "title": "Young Lady",
-            "link": "https://drive.google.com/file/d/1OE4qYELQdHfct5YzA-q1hkjx6yeZ8Hi1/view?usp=sharing"
-          }
-        ]
+    "category": [{
+        "writing": [{
+          "id": "0",
+          "title": "Young Lady",
+          "link": "https://drive.google.com/file/d/1OE4qYELQdHfct5YzA-q1hkjx6yeZ8Hi1/view?usp=sharing"
+        }]
       },
       {
         "acting": []
       },
       {
-        "music": [
-          {
-            "id": "0",
-            "title": "Ievan Polkka",
-            "link": "https://youtu.be/7yh9i0PAjck"
-          }
-        ]
+        "music": [{
+          "id": "0",
+          "title": "Ievan Polkka",
+          "link": "https://youtu.be/7yh9i0PAjck"
+        }]
       }
     ]
   }
