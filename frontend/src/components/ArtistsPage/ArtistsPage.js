@@ -6,7 +6,7 @@ import { classNamePicker } from "../../utils";
 
 export const ArtistsPage = ({ category, setArtist }) => {
   let filteredArray = artists.filter((artist) =>
-    artist.category.some((cat) => cat.hasOwnProperty(category))
+    artist.category.some((cat) => cat[category] && cat[category].length > 0)
   );
 
   return (

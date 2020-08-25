@@ -61,6 +61,9 @@
         ]
       },
       {
+        "music": []
+      },
+      {
         "acting": [{
           "id": "0",
           "title": "Solving tme mystery",
@@ -79,7 +82,8 @@
           "title": "Young Lady",
           "link": "https://drive.google.com/file/d/1OE4qYELQdHfct5YzA-q1hkjx6yeZ8Hi1/view?usp=sharing"
         }]
-      }, {
+      },
+      {
         "acting": []
       },
       {
