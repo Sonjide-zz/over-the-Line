@@ -40,14 +40,14 @@ export const Footer = () => {
                 <li>
                   <div className="div-links">
                     <a
-                      href="https://www.artscouncil.org.uk/"
+                      href="https://www.compasscollect.com/team"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       MEET THE TEAM
                     </a>
                     <a
-                      href="https://www.artscouncil.org.uk/"
+                      href="https://www.compasscollect.com/news"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
