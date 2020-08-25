@@ -6,7 +6,7 @@ import "../Footer/Footer.css";
 
 export const Footer = () => {
   return (
-    <>
+    <div>
       <div className="section-line"></div>
       <footer className="footer d-flex justify-content-center align-items-center">
         <a
@@ -43,6 +43,6 @@ export const Footer = () => {
           />
         </a>
       </footer>
-    </>
+    </div>
   );
 };

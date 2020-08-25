@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { classNamePicker } from "../../utils";
 import { Link, Element } from "react-scroll";
-import { NavBar } from "../NavBar/NavBar";
 
 export const ProductsPage = ({ category, artist, setProduct }) => {
   return (
     <Element name="products" className="element">
       <div className="artist-page">
-        <NavBar />
         <div className="artists-main d-flex justify-content-center align-items-center">
           {artist.category &&
             artist.category

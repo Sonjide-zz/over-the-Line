@@ -1,6 +1,4 @@
 import React from "react";
-
-import { NavBar } from "../NavBar/NavBar";
 import { Link, Element } from "react-scroll";
 
 import { categoryColorsObject } from "../../constant";
@@ -15,8 +13,6 @@ export const CategoriesPage = ({ setCategory }) => {
   return (
     <Element name="artists" className="element">
       <div className="artists-page">
-        <NavBar />
-
         <div className="artists-main">
           {categoriesArray.map((category, index) => (
             <Link
