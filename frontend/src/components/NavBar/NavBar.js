@@ -47,7 +47,7 @@ export const NavBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          DONATE
+          Donate Now
         </a>
       </div>
     </Navbar>
