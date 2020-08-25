@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 import artists from "../../assets/products.json";
-import { NavBar } from "../NavBar/NavBar";
 import { classNamePicker } from "../../utils";
 
 export const ArtistsPage = ({ category, setArtist }) => {
@@ -14,7 +13,6 @@ export const ArtistsPage = ({ category, setArtist }) => {
     <>
       <Element name="artist" className="element">
         <div className="artist-page">
-          <NavBar />
           <div className="artists-main d-flex justify-content-center align-items-center">
             {category &&
               filteredArray.map((artist, index) => (
@@ -29,6 +27,7 @@ export const ArtistsPage = ({ category, setArtist }) => {
                   duration={1500}
                   key={index}
                 >
+                  {console.log(artist.category["acting"])}
                   <div className={classNamePicker(category)}>{artist.name}</div>
                 </Link>
               ))}
