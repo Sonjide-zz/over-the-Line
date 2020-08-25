@@ -1,5 +1,4 @@
 export const colorsArray = ["blue", "orange", "yellow"];
-export const categoriesArray = ["writing", "acting", "music"];
 
 export const categoryColorsObject = {
   blue: "blue",
@@ -9,3 +8,9 @@ export const categoryColorsObject = {
   acting: "acting",
   music: "music",
 };
+
+export const categoriesArray = [
+  { title: "writing", color: categoryColorsObject.blue },
+  { title: "acting", color: categoryColorsObject.orange },
+  { title: "music", color: categoryColorsObject.yellow },
+];

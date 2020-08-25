@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;800&display=swap");
 
 :root {
   --main-bg-color: #e8332c;
@@ -7,105 +7,11 @@
   --main-blue: #48b2d7;
   --main-yellow: #ffff00;
   --main-orange: #f17517;
-
 }
 
 body {
-  font-family: 'Baloo Tamma 2',
-    cursive !important;
-
+  font-family: "Baloo Tamma 2", cursive !important;
 }
-
-/* homepage */
-.homepage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 70vh;
-}
-
-.h1-over-the-line {
-  background-color: var(--main-bg-color);
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  color: var(--main-white);
-  padding-bottom: 2px;
-}
-
-.h1-over-the-line:hover {
-  text-decoration: none;
-  transform: scale(1.1);
-  transition-duration: 0.5s;
-}
-
-.h1-link {
-  width: 100%;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.h1-link:hover {
-  width: 100%;
-  text-decoration: none;
-}
-
-
-.text h1 {
-  color: var(--main-white);
-  padding-top: 12px;
-}
-
-/* navbar */
-
-.navbar-bg-color {
-  background-color: var(--main-bg-color);
-  transition: ease-in-out 0.5s;
-  z-index: 1;
-}
-
-.main-white {
-  color: var(--main-white);
-}
-
-#logo {
-  margin: 0;
-}
-
-.donate-link-red a {
-  color: var(--main-white);
-  background-color: var(--main-bg-color);
-  padding: 5px 20px;
-  cursor: pointer;
-  text-decoration: none;
-  padding-bottom: 2px;
-}
-
-.donate-link-red a:hover {
-  color: var(--main-bg-color);
-  background-color: var(--main-white);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.donate-link-white a {
-  color: var(--main-bg-color);
-  background-color: var(--main-white);
-  cursor: pointer;
-  padding: 5px 20px;
-  text-decoration: none;
-  padding-bottom: 2px;
-}
-
-.donate-link-white a:hover {
-  color: var(--main-white);
-  background-color: var(--main-bg-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-
 
 /* multiple-artist page */
 
@@ -138,7 +44,6 @@ body {
   padding: 20px;
   font-weight: 600;
   text-align: center;
-
 }
 
 .bubbles-link-artists:hover {
@@ -148,8 +53,9 @@ body {
   color: var(--main-black);
 }
 
-.yellow {
-  background-color: var(--main-yellow);
+.yellow,
+.blue,
+.orange {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -161,24 +67,14 @@ body {
 
 .blue {
   background-color: var(--main-blue);
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid var(--main-bg-color);
 }
 
 .orange {
   background-color: var(--main-orange);
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid var(--main-bg-color);
+}
+
+.yellow {
+  background-color: var(--main-yellow);
 }
 
 /*
@@ -188,30 +84,4 @@ body {
   width: 100%;
   height: 0.5vh;
   background-color: var(--main-bg-color);
-}
-
-/* single product-page */
-
-.product-container-info ul {
-  display: flex;
-  padding: 20px;
-}
-
-.product-container-info ul li {
-  padding-right: 20px;
-  list-style-type: none;
-}
-
-.artist-name {
-  height: 100px;
-}
-
-.artist-info {
-  max-height: 250px;
-  word-wrap: break-word;
-  white-space: wrap;
-}
-
-.artist-social-media {
-  height: 100px;
 }

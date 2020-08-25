@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import { Link, Element } from "react-scroll";
-import artists from "../../assets/products.json";
 import { classNamePicker } from "../../utils";
+
+import artists from "../../assets/products.json";
 
 export const ArtistsPage = ({ category, setArtist }) => {
   let filteredArray = artists.filter((artist) =>
@@ -27,7 +29,6 @@ export const ArtistsPage = ({ category, setArtist }) => {
                   duration={1500}
                   key={index}
                 >
-                  {console.log(artist.category["acting"])}
                   <div className={classNamePicker(category)}>{artist.name}</div>
                 </Link>
               ))}

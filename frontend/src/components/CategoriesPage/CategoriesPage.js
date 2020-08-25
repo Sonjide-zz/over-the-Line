@@ -1,15 +1,9 @@
 import React from "react";
-import { Link, Element } from "react-scroll";
 
-import { categoryColorsObject } from "../../constant";
+import { Link, Element } from "react-scroll";
+import { categoriesArray } from "../../constant";
 
 export const CategoriesPage = ({ setCategory }) => {
-  const categoriesArray = [
-    { title: "writing", color: categoryColorsObject.blue },
-    { title: "acting", color: categoryColorsObject.orange },
-    { title: "music", color: categoryColorsObject.yellow },
-  ];
-
   return (
     <Element name="artists" className="element">
       <div className="artists-page">

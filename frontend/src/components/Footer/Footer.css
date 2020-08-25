@@ -1,5 +1,5 @@
 .footer {
-  width: 100vw;
+  width: 100%;
   height: 20vh;
 }
 
@@ -9,25 +9,22 @@
 
 .footer-links li {
   list-style-type: none;
-
 }
-
 
 .footer-links li a:hover {
   color: var(--main-bg-color);
-  text-decoration: none !important
+  text-decoration: none !important;
 }
 
 .div-links {
   display: flex;
   flex-direction: column;
-
 }
 
 .div-links a {
   margin: 10px;
   color: var(--main-black);
-  text-decoration: none !important
+  text-decoration: none !important;
 }
 
 #dropdown-basic {
@@ -39,7 +36,7 @@
 }
 
 #dropdown-basic:focus {
-  box-shadow: none !important
+  box-shadow: none !important;
 }
 
 .social {
@@ -62,7 +59,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .survey-btn button {
