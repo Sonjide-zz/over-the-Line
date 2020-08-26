@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 import { Navbar } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import logo2 from "../../assets/logo2.png";
+
+import "./NavBar.css";
 
 export const NavBar = () => {
   const [navbarColor, setNavbarColor] = useState("");

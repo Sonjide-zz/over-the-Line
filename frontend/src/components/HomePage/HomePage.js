@@ -1,7 +1,10 @@
 import React from "react";
+
 import { Link } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
 import { Footer } from "../Footer/Footer";
+
+import "./HomePage.css";
 
 export const HomePage = () => {
   return (
