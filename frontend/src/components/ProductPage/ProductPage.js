@@ -5,16 +5,17 @@ import { Footer } from "../Footer/Footer";
 import { Container, Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 
+import { BackToTop } from "../BackToTop/BackToTop";
 import "./ProductPage.css";
 
 export const ProductPage = ({ product, artist }) => {
   return (
     <Element name="product" className="element">
       <div className="artist-page">
-        <div className="artists-main-product d-flex justify-content-center align-items-center">
+        <div className="artists-main-product d-flex flex-column justify-content-center align-items-center">
           {Object.entries(product).length !== 0 && (
             <Container fluid="md">
-              <Row>
+              <Row className="d-flex justify-content-center align-items-center row-product">
                 <Col lg={6} xs={12} md={12}>
                   <div className="embed-responsive embed-responsive-16by9">
                     <iframe
@@ -42,11 +43,13 @@ export const ProductPage = ({ product, artist }) => {
                   </div>
                   <div className="artist-info">{artist.bio}</div>
                 </Col>
+                <BackToTop />
               </Row>
             </Container>
           )}
         </div>
       </div>
+
       <Footer />
     </Element>
   );

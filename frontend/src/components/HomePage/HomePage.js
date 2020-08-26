@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-scroll";
+import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
 import { Footer } from "../Footer/Footer";
 
@@ -8,7 +8,7 @@ import "./HomePage.css";
 
 export const HomePage = () => {
   return (
-    <>
+    <Element name="homepage" className="element">
       <NavBar />
       <div className="homepage">
         <Link
@@ -24,6 +24,6 @@ export const HomePage = () => {
         </Link>
       </div>
       <Footer />
-    </>
+    </Element>
   );
 };
