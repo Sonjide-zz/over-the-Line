@@ -97,6 +97,7 @@ export const Footer = () => {
                         icon={faFacebook}
                         color="var(--main-bg-color)"
                         size="2x"
+                        title="Facebook"
                       />
                     </a>
                   </li>
@@ -110,6 +111,7 @@ export const Footer = () => {
                         icon={faInstagram}
                         color="var(--main-bg-color)"
                         size="2x"
+                        title="Instagram"
                       />
                     </a>
                   </li>
@@ -123,6 +125,7 @@ export const Footer = () => {
                         icon={faTwitter}
                         color="var(--main-bg-color)"
                         size="2x"
+                        title="Twitter"
                       />
                     </a>
                   </li>
