@@ -136,6 +136,7 @@ export const Footer = () => {
                         icon={faYoutube}
                         color="var(--main-bg-color)"
                         size="2x"
+                        title="Youtube"
                       />
                     </a>
                   </li>

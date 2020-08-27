@@ -1,13 +1,15 @@
 import React from "react";
 
 import { Link, Element } from "react-scroll";
+import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 import { categoriesArray } from "../../constant";
+import "../CategoriesPage/CategoriesPage.css";
 
 export const CategoriesPage = ({ setCategory }) => {
   return (
     <Element name="artists" className="element">
       <div className="artists-page">
-        <div className="artists-main">
+        <div className="artists-main-categories">
           {categoriesArray.map((category, index) => (
             <Link
               onClick={(e) => setCategory(category.title)}
@@ -20,7 +22,13 @@ export const CategoriesPage = ({ setCategory }) => {
               duration={1500}
               key={index}
             >
-              <div className={category.color}>{category.title}</div>
+              <div className={category.color} id={category.color}>
+                {category.title}
+                <BubbleBorder
+                  title="bubble-border"
+                  className="bubble-border"
+                ></BubbleBorder>
+              </div>
             </Link>
           ))}
         </div>
