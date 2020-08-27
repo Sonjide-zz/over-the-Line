@@ -55,16 +55,27 @@
   list-style-type: none;
 }
 
+
 .survey-btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.survey-btn button {
-  padding: 6px 12px;
+.survey-btn a {
+  padding: 8px 20px;
   border: none;
   background-color: var(--main-bg-color);
   color: var(--main-white);
+  padding-bottom: 2px;
+  text-decoration: none !important;
+}
+
+.survey-btn a:hover {
+  padding: 6px 12px;
+  border: none;
+  background-color: var(--main-white);
+  color: var(--main-bg-color);
   padding-bottom: 1px;
+  text-decoration: none !important;
 }

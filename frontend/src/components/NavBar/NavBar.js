@@ -49,6 +49,7 @@ export const NavBar = () => {
           href="https://www.compasscollect.com/donate"
           target="_blank"
           rel="noopener noreferrer"
+          title="Donate"
         >
           Donate Now
         </a>
