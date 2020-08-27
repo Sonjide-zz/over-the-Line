@@ -21,3 +21,13 @@
 .artist-social-media {
   height: 100px;
 }
+
+.row-product {
+  padding-top: 50px !important
+}
+
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
