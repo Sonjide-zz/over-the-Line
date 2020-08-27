@@ -1,0 +1,23 @@
+.artists-main-categories {
+    display: flex;
+    justify-content: center;
+}
+
+#blue {
+    border: none;
+    margin-top: 50px;
+}
+
+#orange {
+    border: none;
+    margin-top: 20em;
+}
+
+#yellow {
+    border: none;
+
+}
+
+.bubble-border {
+    position: absolute;
+}

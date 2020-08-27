@@ -13,7 +13,7 @@ export const BackToTop = () => {
       offset={0}
       duration={1000}
     >
-      <div className="back-to-top">Back to top </div>
+      <div className="back-to-top">back to top </div>
     </Link>
   );
 };
