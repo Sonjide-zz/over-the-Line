@@ -23,7 +23,7 @@ export const CategoriesPage = ({ setCategory }) => {
               key={index}
             >
               <div className={category.color} id={category.color}>
-                {category.title}
+                {category.title} room
                 <BubbleBorder
                   title="bubble-border"
                   className="bubble-border"
