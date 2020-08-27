@@ -26,6 +26,7 @@ export const Footer = () => {
                       href="https://www.compasscollect.com/about-compass"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="What we do"
                     >
                       WHAT WE DO
                     </a>
@@ -33,6 +34,7 @@ export const Footer = () => {
                       href="https://www.compasscollect.com/contact"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="Contact us"
                     >
                       CONTACT US
                     </a>
@@ -45,6 +47,7 @@ export const Footer = () => {
                       href="https://www.compasscollect.com/team"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="Meet the team"
                     >
                       MEET THE TEAM
                     </a>
@@ -52,6 +55,7 @@ export const Footer = () => {
                       href="https://www.compasscollect.com/news"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="News"
                     >
                       NEWS
                     </a>
@@ -63,10 +67,16 @@ export const Footer = () => {
                       PROJECTS
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item href="https://www.compasscollect.com/past-projects">
+                      <Dropdown.Item
+                        href="https://www.compasscollect.com/past-projects"
+                        title="Past projects"
+                      >
                         PAST PROJECTS
                       </Dropdown.Item>
-                      <Dropdown.Item href="https://www.compasscollect.com/current-projects">
+                      <Dropdown.Item
+                        href="https://www.compasscollect.com/current-projects"
+                        title="Current projects"
+                      >
                         CURRENT PROJECTS
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -138,6 +148,7 @@ export const Footer = () => {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfF8jKCoLqanEIJkZjksnDmZpniMiH4Z5ImMA0gtHgEqLhCzA/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Survey"
                 >
                   SURVEY
                 </a>
