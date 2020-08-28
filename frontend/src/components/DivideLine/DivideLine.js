@@ -4,8 +4,8 @@ import divideLine from "../../assets/divide_line.png";
 import "../DivideLine/DivideLine.css";
 export const DivideLine = () => {
   return (
-    <div>
-      <img src={divideLine} alt="divider" className="divide-line" />
+    <div className="d-flex justify-content-center">
+      <img src={divideLine} alt="divider" className="divide-line " />
     </div>
   );
 };
