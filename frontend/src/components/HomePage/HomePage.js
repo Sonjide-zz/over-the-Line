@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
-import BrushOverTheLine from "../../assets/brushOverTheLine.gif";
+import BrushOverTheLine from "../../assets/brushOver.gif";
 import "./HomePage.css";
 
 export const HomePage = () => {

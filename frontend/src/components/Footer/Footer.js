@@ -68,7 +68,7 @@ export const Footer = () => {
                       rel="noopener noreferrer"
                       title="Meet the team"
                     >
-                      MEET THE TEAM
+                      COMPASS TEAM
                     </a>
                   </div>
                 </li>
