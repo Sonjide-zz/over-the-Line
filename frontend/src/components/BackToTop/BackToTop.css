@@ -12,6 +12,10 @@
 }
 
 .back-to-top:hover {
-    transform: scale(1.1);
-    transition: ease-in-out 0.5s;
+    background-color: var(--main-bg-color);
+}
+
+.bubble-border-back {
+    position: absolute;
+    width: 120px !important;
 }

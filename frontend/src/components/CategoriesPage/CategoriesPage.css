@@ -4,16 +4,22 @@
 }
 
 #blue {
+    width: 150px;
+    height: 150px;
     border: none;
     margin-top: 50px;
 }
 
 #orange {
+    width: 150px;
+    height: 150px;
     border: none;
     margin-top: 20em;
 }
 
 #yellow {
+    width: 150px;
+    height: 150px;
     border: none;
 
 }

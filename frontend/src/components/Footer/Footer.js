@@ -6,7 +6,6 @@ import {
   faFacebook,
   faTwitter,
   faInstagram,
-  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 import "../Footer/Footer.css";
@@ -18,7 +17,7 @@ export const Footer = () => {
       <footer className="footer d-flex ">
         <Container>
           <Row>
-            <Col lg={6} sm={12} className="footer-links">
+            <Col lg={5} sm={12} className="footer-links">
               <ul className="d-flex ">
                 <li>
                   <div className="div-links">
@@ -37,27 +36,6 @@ export const Footer = () => {
                       title="Contact us"
                     >
                       CONTACT US
-                    </a>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="div-links">
-                    <a
-                      href="https://www.compasscollect.com/team"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="Meet the team"
-                    >
-                      MEET THE TEAM
-                    </a>
-                    <a
-                      href="https://www.compasscollect.com/news"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="News"
-                    >
-                      NEWS
                     </a>
                   </div>
                 </li>
@@ -82,25 +60,23 @@ export const Footer = () => {
                     </Dropdown.Menu>
                   </Dropdown>
                 </li>
+                <li>
+                  <div className="div-links">
+                    <a
+                      href="https://www.compasscollect.com/team"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Meet the team"
+                    >
+                      MEET THE TEAM
+                    </a>
+                  </div>
+                </li>
               </ul>
             </Col>
             <Col lg={3} sm={12} className="social">
               <div>
                 <ul>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/compasscollect"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon
-                        icon={faFacebook}
-                        color="var(--main-bg-color)"
-                        size="2x"
-                        title="Facebook"
-                      />
-                    </a>
-                  </li>
                   <li>
                     <a
                       href="https://www.instagram.com/compasscollect/"
@@ -115,6 +91,7 @@ export const Footer = () => {
                       />
                     </a>
                   </li>
+
                   <li>
                     <a
                       href="https://twitter.com/Compasscollect2"
@@ -131,6 +108,21 @@ export const Footer = () => {
                   </li>
                   <li>
                     <a
+                      href="https://www.facebook.com/compasscollect"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faFacebook}
+                        color="var(--main-bg-color)"
+                        size="2x"
+                        title="Facebook"
+                      />
+                    </a>
+                  </li>
+
+                  <li>
+                    {/* <a
                       href="https://www.youtube.com/channel/UCZBalasefhzsdQ2dWtlZCuw"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -141,7 +133,7 @@ export const Footer = () => {
                         size="2x"
                         title="Youtube"
                       />
-                    </a>
+                    </a> */}
                   </li>
                 </ul>
               </div>
@@ -154,7 +146,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   title="Survey"
                 >
-                  SURVEY
+                  GIVE US FEEDBACK
                 </a>
               </div>
             </Col>

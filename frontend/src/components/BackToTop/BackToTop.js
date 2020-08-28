@@ -1,6 +1,8 @@
 import React from "react";
-import "./BackToTop.css";
+
 import { Link } from "react-scroll";
+import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
+import "./BackToTop.css";
 
 export const BackToTop = () => {
   return (
@@ -13,7 +15,13 @@ export const BackToTop = () => {
       offset={0}
       duration={1000}
     >
-      <div className="back-to-top">back to top </div>
+      <div className="back-to-top">
+        back to top
+        <BubbleBorder
+          title="bubble-border"
+          className="bubble-border-back"
+        ></BubbleBorder>
+      </div>
     </Link>
   );
 };

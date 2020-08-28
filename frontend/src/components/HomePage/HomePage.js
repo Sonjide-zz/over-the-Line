@@ -2,8 +2,7 @@ import React from "react";
 
 import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
-import { Footer } from "../Footer/Footer";
-
+import BrushOverTheLine from "../../assets/brushOverTheLine.gif";
 import "./HomePage.css";
 
 export const HomePage = () => {
@@ -21,10 +20,15 @@ export const HomePage = () => {
           offset={0}
           duration={1500}
         >
-          <h1 className="h1-over-the-line">Over the line</h1>
+          <div className="d-flex justify-content-center">
+            <img
+              src={BrushOverTheLine}
+              alt="gif-brush"
+              className="brush-over"
+            />
+          </div>
         </Link>
       </div>
-      <Footer />
     </>
   );
 };

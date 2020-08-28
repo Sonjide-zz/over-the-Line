@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   height: 70vh;
 }
 
@@ -34,4 +34,9 @@
 .text h1 {
   color: var(--main-white);
   padding-top: 12px;
+}
+
+.brush-over {
+  margin-top: 100px;
+  margin-left: 50px;
 }

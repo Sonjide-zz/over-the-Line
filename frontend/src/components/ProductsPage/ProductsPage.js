@@ -3,6 +3,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { classNamePicker } from "../../utils";
 import { Link, Element } from "react-scroll";
+import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
+import { DivideLine } from "../DivideLine/DivideLine";
+
+import "../ProductsPage/ProductsPage.css";
 
 export const ProductsPage = ({ category, artist, setProduct }) => {
   return (
@@ -26,10 +30,15 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
                 >
                   <div key={index} className={classNamePicker(category)}>
                     {product.title}
+                    <BubbleBorder
+                      title="bubble-border"
+                      className="bubble-border-products"
+                    ></BubbleBorder>
                   </div>
                 </Link>
               ))}
         </div>
+        <DivideLine />
       </div>
     </Element>
   );
