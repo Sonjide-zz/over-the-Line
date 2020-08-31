@@ -1,17 +1,14 @@
 .back-to-top {
-    margin-top: 15px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid var(--main-bg-color);
-    background-color: #c0332c;
+    margin-top: 20px;
+    border: none;
+    background-color: var(--main-bg-color);
+    color: var(--main-white);
+    padding-bottom: 1px;
+    text-decoration: none !important;
     cursor: pointer;
 }
 
 .back-to-top:hover {
-    transform: scale(1.1);
-    transition: ease-in-out 0.5s;
+    background-color: var(--main-white);
+    color: var(--main-black);
 }

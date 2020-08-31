@@ -1,23 +1,41 @@
 .artists-main-categories {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #blue {
+    width: 150px;
+    height: 150px;
     border: none;
     margin-top: 50px;
 }
 
 #orange {
+    width: 150px;
+    height: 150px;
     border: none;
     margin-top: 20em;
 }
 
 #yellow {
+    width: 150px;
+    height: 150px;
     border: none;
 
 }
 
 .bubble-border {
     position: absolute;
+}
+
+@media (max-width: 767px) {
+    #blue {
+
+        margin-top: 50px;
+    }
+
+    #orange {
+        margin-top: 0em;
+    }
 }

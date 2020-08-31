@@ -21,7 +21,7 @@ export const NavBar = () => {
     } else {
       setNavbarDonateColor("donate-link-white");
       setLogos(logo2);
-      setNavbarTitle("Over the line");
+      setNavbarTitle("Over-the-Line");
       return setNavbarColor("navbar-bg-color main-white");
     }
   };
@@ -44,6 +44,7 @@ export const NavBar = () => {
       <div className="text-center col-8 text">
         <h1>{navbarTitle}</h1>
       </div>
+
       <div className={navbarDonateColor}>
         <a
           href="https://www.compasscollect.com/donate"

@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 import { classNamePicker } from "../../utils";
 
+import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
+import { DivideLine } from "../DivideLine/DivideLine";
 import artists from "../../assets/products.json";
+import "../ArtistsPage/ArtistsPage.css";
 
 export const ArtistsPage = ({ category, setArtist }) => {
   let filteredArray = artists.filter((artist) =>
@@ -29,10 +32,17 @@ export const ArtistsPage = ({ category, setArtist }) => {
                   duration={1500}
                   key={index}
                 >
-                  <div className={classNamePicker(category)}>{artist.name}</div>
+                  <div className={classNamePicker(category)}>
+                    {artist.name}
+                    <BubbleBorder
+                      title="bubble-border"
+                      className="bubble-border-artists"
+                    ></BubbleBorder>
+                  </div>
                 </Link>
               ))}
           </div>
+          <DivideLine />
         </div>
       </Element>
     </>

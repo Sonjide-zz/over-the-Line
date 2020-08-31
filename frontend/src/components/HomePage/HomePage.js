@@ -2,8 +2,7 @@ import React from "react";
 
 import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
-import { Footer } from "../Footer/Footer";
-
+import BrushOver from "../../assets/brushOver.gif";
 import "./HomePage.css";
 
 export const HomePage = () => {
@@ -11,7 +10,15 @@ export const HomePage = () => {
     <>
       <Element name="homepage" />
       <NavBar />
-      <div className="homepage">
+      <div
+        className="homepage"
+        id="videoBG"
+        style={{
+          backgroundImage: "url(" + BrushOver + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <Link
           className="h1-link"
           activeClass="active"
@@ -21,10 +28,9 @@ export const HomePage = () => {
           offset={0}
           duration={1500}
         >
-          <h1 className="h1-over-the-line">Over the line</h1>
+          <div className="d-flex justify-content-center link-brush">""</div>
         </Link>
       </div>
-      <Footer />
     </>
   );
 };

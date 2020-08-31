@@ -24,7 +24,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
+
 
 .artists-main-product {
   height: 80vh;
@@ -56,13 +58,13 @@ body {
 .yellow,
 .blue,
 .orange {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 5px solid var(--main-bg-color);
+
 }
 
 .blue {
@@ -79,6 +81,7 @@ body {
 
 .section-line {
   width: 100%;
+  margin-top: 20px;
   height: 0.5vh;
   background-color: var(--main-bg-color);
 }

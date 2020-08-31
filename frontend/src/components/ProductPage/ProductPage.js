@@ -19,7 +19,7 @@ export const ProductPage = ({ product, artist }) => {
                 <Col lg={6} xs={12} md={12}>
                   <div className="embed-responsive embed-responsive-16by9">
                     <iframe
-                      className="embed-responsive-item"
+                      className="embed-responsive-item youtube-video"
                       width="550px"
                       height="400px"
                       title="alex-video"
@@ -43,11 +43,13 @@ export const ProductPage = ({ product, artist }) => {
                   </div>
                   <div className="artist-info">{artist.bio}</div>
                 </Col>
-                <BackToTop />
               </Row>
             </Container>
           )}
         </div>
+      </div>
+      <div className="d-flex justify-content-center">
+        <BackToTop />
       </div>
 
       <Footer />
