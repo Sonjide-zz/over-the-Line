@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-direction: column; */
-  height: 70vh;
+  height: 100vh;
 }
 
 .h1-over-the-line {
@@ -36,7 +35,29 @@
   padding-top: 12px;
 }
 
-.brush-over {
-  margin-top: 100px;
-  margin-left: 50px;
+.link-brush {
+  visibility: hidden;
+  width: 100%;
+  height: 100px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: 80vh;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #videoBG {
+    width: auto;
+    height: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  #videoBG {
+    display: none;
+  }
+
 }

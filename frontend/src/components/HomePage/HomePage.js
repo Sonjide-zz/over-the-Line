@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
-import BrushOverTheLine from "../../assets/brushOver.gif";
+import BrushOver from "../../assets/brushOver.gif";
 import "./HomePage.css";
 
 export const HomePage = () => {
@@ -10,7 +10,15 @@ export const HomePage = () => {
     <>
       <Element name="homepage" />
       <NavBar />
-      <div className="homepage">
+      <div
+        className="homepage"
+        id="videoBG"
+        style={{
+          backgroundImage: "url(" + BrushOver + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <Link
           className="h1-link"
           activeClass="active"
@@ -20,13 +28,7 @@ export const HomePage = () => {
           offset={0}
           duration={1500}
         >
-          <div className="d-flex justify-content-center">
-            <img
-              src={BrushOverTheLine}
-              alt="gif-brush"
-              className="brush-over"
-            />
-          </div>
+          <div className="d-flex justify-content-center link-brush">""</div>
         </Link>
       </div>
     </>

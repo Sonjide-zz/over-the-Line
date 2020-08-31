@@ -1,6 +1,7 @@
 .artists-main-categories {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #blue {
@@ -26,4 +27,15 @@
 
 .bubble-border {
     position: absolute;
+}
+
+@media (max-width: 767px) {
+    #blue {
+
+        margin-top: 50px;
+    }
+
+    #orange {
+        margin-top: 0em;
+    }
 }
