@@ -14,7 +14,7 @@ export const BackToTop = () => {
         offset={0}
         duration={1000}
       >
-        back to top
+        BACK TO TOP
       </Link>
     </button>
   );

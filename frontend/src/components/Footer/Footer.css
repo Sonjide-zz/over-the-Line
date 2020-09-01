@@ -1,9 +1,11 @@
 .footer {
   width: 100%;
+  bottom: 0;
 }
 
 .footer-links {
-  margin-top: 20px;
+  margin-top: 10px;
+
 }
 
 .footer-links li {
@@ -21,7 +23,7 @@
 }
 
 .div-links a {
-  margin: 10px;
+  margin: 5px;
   color: var(--main-black);
   text-decoration: none !important;
 }
@@ -31,7 +33,7 @@
   border: none !important;
   color: var(--main-black) !important;
   outline: none !important;
-  margin-top: 5px;
+  margin-top: -1px;
 }
 
 #dropdown-basic:focus {
@@ -39,14 +41,11 @@
 }
 
 .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.social ul {
-  display: flex;
+.social-list {
+  padding: 0px;
 }
 
 .social li {
