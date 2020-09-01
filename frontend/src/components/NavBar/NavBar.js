@@ -33,7 +33,7 @@ export const NavBar = () => {
   return (
     <Navbar className={navbarColor} sticky="top">
       <Navbar.Brand className="col-2" id="logo">
-        <a href="http://localhost:3000">
+        <a href="http://localhost:3000" title="OVER THE LINE">
           <img
             alt="Logo"
             src={logos}
