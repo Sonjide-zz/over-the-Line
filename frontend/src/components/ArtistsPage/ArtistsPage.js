@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import { Link, Element } from "react-scroll";
@@ -6,10 +6,18 @@ import { classNamePicker } from "../../utils";
 
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 import { DivideLine } from "../DivideLine/DivideLine";
-import artists from "../../assets/products.json";
+// import artists from "../../assets/products.json";
 import "../ArtistsPage/ArtistsPage.css";
 
 export const ArtistsPage = ({ category, setArtist }) => {
+  const [artists, setArtists] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001")
+      .then((res) => res.json())
+      .then((artists) => setArtists(artists));
+  }, []);
+
   let filteredArray = artists.filter((artist) =>
     artist.category.some((cat) => cat[category] && cat[category].length > 0)
   );
