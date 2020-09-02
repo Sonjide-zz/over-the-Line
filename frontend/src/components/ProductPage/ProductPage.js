@@ -16,11 +16,11 @@ export const ProductPage = ({ product, artist }) => {
           {Object.entries(product).length !== 0 && (
             <Container fluid="md">
               <Row className="d-flex justify-content-center align-items-center row-product">
-                <Col lg={6} xs={12} md={12}>
-                  <div className="embed-responsive embed-responsive-16by9">
+                <Col lg={8} xs={12} md={12}>
+                  <div>
                     <iframe
                       className="embed-responsive-item youtube-video"
-                      width="550px"
+                      width="100%"
                       height="400px"
                       title="alex-video"
                       src="https://www.youtube.com/embed/LN-CXvWu90A"
@@ -31,7 +31,7 @@ export const ProductPage = ({ product, artist }) => {
                   </div>
                 </Col>
                 <Col
-                  lg={6}
+                  lg={4}
                   xs={12}
                   md={12}
                   sm={12}
@@ -47,9 +47,9 @@ export const ProductPage = ({ product, artist }) => {
             </Container>
           )}
         </div>
-      </div>
-      <div className="d-flex justify-content-center">
-        <BackToTop />
+        <div className="d-flex justify-content-center">
+          <BackToTop />
+        </div>
       </div>
 
       <Footer />

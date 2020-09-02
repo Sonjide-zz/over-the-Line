@@ -28,7 +28,11 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
                   offset={0}
                   duration={1500}
                 >
-                  <div key={index} className={classNamePicker(category)}>
+                  <div
+                    key={index}
+                    className={classNamePicker(category)}
+                    id="products-bubbles"
+                  >
                     {product.title}
                     <BubbleBorder
                       title="bubble-border"
