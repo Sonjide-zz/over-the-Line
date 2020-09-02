@@ -33,13 +33,15 @@ export const NavBar = () => {
   return (
     <Navbar className={navbarColor} sticky="top">
       <Navbar.Brand className="col-2" id="logo">
-        <img
-          alt="Logo"
-          src={logos}
-          width="70"
-          height="50"
-          className="d-inline-block align-top logo"
-        />
+        <a href="http://localhost:3000" title="OVER THE LINE">
+          <img
+            alt="Logo"
+            src={logos}
+            width="70"
+            height="50"
+            className="d-inline-block align-top logo"
+          />
+        </a>
       </Navbar.Brand>
       <div className="text-center col-8 text">
         <h1>{navbarTitle}</h1>
