@@ -21,3 +21,9 @@ Target Audience - publicly available.
 
 - React
 - Express
+
+#### Backend
+
+## Create .env
+
+- Create a .env file inside the backend folder and copy all variables from .env.example
