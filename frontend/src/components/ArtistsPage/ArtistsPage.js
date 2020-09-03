@@ -6,7 +6,6 @@ import { classNamePicker } from "../../utils";
 
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 import { DivideLine } from "../DivideLine/DivideLine";
-// import artists from "../../assets/products.json";
 import "../ArtistsPage/ArtistsPage.css";
 
 export const ArtistsPage = ({ category, setArtist }) => {
