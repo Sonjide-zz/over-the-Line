@@ -1,10 +1,9 @@
 const express = require("express");
-const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv/config");
 
-//MIDDLEWARES
+const app = express();
 app.use(cors());
 
 const uri = process.env.DATABASE_URI;
@@ -21,4 +20,7 @@ mongoose.connect(
   }
 );
 
-app.listen(3001);
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`App is running on port ${ PORT }`);
+});
