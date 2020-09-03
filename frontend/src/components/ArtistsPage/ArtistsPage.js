@@ -11,11 +11,13 @@ import "../ArtistsPage/ArtistsPage.css";
 export const ArtistsPage = ({ category, setArtist }) => {
   const [artists, setArtists] = useState([]);
 
+  const uri = process.env.REACT_APP_API;
+
   useEffect(() => {
-    fetch("http://localhost:3001")
+    fetch(uri)
       .then((res) => res.json())
       .then((artists) => setArtists(artists));
-  }, []);
+  }, [uri]);
 
   let filteredArray = artists.filter((artist) =>
     artist.category.some((cat) => cat[category] && cat[category].length > 0)
