@@ -3,7 +3,6 @@ import React from "react";
 import { Link, Element } from "react-scroll";
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 import { categoriesArray } from "../../constant";
-import { DivideLine } from "../DivideLine/DivideLine";
 
 import "../CategoriesPage/CategoriesPage.css";
 
@@ -34,7 +33,6 @@ export const CategoriesPage = ({ setCategory }) => {
             </Link>
           ))}
         </div>
-        <DivideLine />
       </div>
     </Element>
   );

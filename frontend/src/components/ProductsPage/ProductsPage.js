@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { classNamePicker } from "../../utils";
 import { Link, Element } from "react-scroll";
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
-import { DivideLine } from "../DivideLine/DivideLine";
 
 import "../ProductsPage/ProductsPage.css";
 
@@ -42,7 +41,6 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
                 </Link>
               ))}
         </div>
-        <DivideLine />
       </div>
     </Element>
   );

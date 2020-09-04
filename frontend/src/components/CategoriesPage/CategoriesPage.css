@@ -39,3 +39,10 @@
         margin-top: 0em;
     }
 }
+
+.section-line-categories {
+    width: 100%;
+    height: 0.5vh;
+    background-color: var(--main-bg-color);
+    margin-top: 50px;
+}

@@ -36,9 +36,18 @@
 }
 
 .link-brush {
-  visibility: hidden;
+  /* visibility: hidden; */
   width: 100%;
   height: 100px;
+}
+
+.link-brush {
+  /* visibility: hidden; */
+  width: 100%;
+  height: 100px;
+  margin-top: 200px;
+  text-decoration: none;
+  color: red;
 }
 
 @media (min-aspect-ratio: 16/9) {

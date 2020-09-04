@@ -8,6 +8,11 @@
 
 }
 
+.footer-links ul {
+  margin: 0px;
+  padding: 0px;
+}
+
 .footer-links li {
   list-style-type: none;
 }
