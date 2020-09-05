@@ -24,12 +24,6 @@ function App() {
       cat.hasOwnProperty(category)
     )[0][category][0];
   }
-  window.addEventListener("resize", () => {
-    document
-      .querySelector(":root")
-      .style.setProperty("--vh", window.innerHeight / 100 + "px");
-  });
-
   return (
     <>
       <HomePage />

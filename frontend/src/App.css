@@ -16,24 +16,24 @@ body {
 /* multiple-artist page */
 
 .element {
-  height: calc(100 * var(--vh));
+  background-image: url("./assets/bg-over-the-line.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .artists-main {
-  height: calc(100 * var(--vh));
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
 
 .artists-main-product {
-  height: calc(100 * var(--vh));
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 /* bubbles */

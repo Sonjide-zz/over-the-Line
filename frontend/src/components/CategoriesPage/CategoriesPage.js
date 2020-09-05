@@ -9,7 +9,7 @@ import "../CategoriesPage/CategoriesPage.css";
 export const CategoriesPage = ({ setCategory }) => {
   return (
     <Element name="artists" className="element">
-      <div className="artists-page ">
+      <div>
         <div className="artists-main-categories">
           {categoriesArray.map((category, index) => (
             <Link

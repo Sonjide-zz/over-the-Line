@@ -3,7 +3,7 @@
 }
 
 .artist-info {
-  max-height: 250px;
+  height: 100%;
   word-wrap: break-word;
   white-space: wrap;
 
