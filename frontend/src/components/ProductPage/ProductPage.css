@@ -29,3 +29,12 @@
   border: 1px solid red;
   padding: 20px;
 }
+
+.artist-page {
+  height: 100vh;
+}
+
+.product-container {
+  height: 85vh;
+  padding-top: 60px;
+}
