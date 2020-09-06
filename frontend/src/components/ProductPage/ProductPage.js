@@ -11,64 +11,66 @@ import "./ProductPage.css";
 export const ProductPage = ({ product, artist, category }) => {
   return (
     <Element name="product" className="element">
-      <div>
-        <div className="artist-page">
-          <div className="artists-main-product d-flex flex-column justify-content-center align-items-center">
-            {Object.entries(product).length !== 0 && (
-              <Container fluid="md">
-                <Row className="d-flex justify-content-center align-items-center row-product">
-                  <Col lg={8} xs={12} md={12}>
-                    <div>
-                      {category === "writing" &&
-                      !artist.category[0]["writing"][0]["link"].includes(
-                        "https"
-                      ) ? (
-                        <div
-                          className="product-writing"
-                          dangerouslySetInnerHTML={{
-                            __html: product.link,
-                          }}
-                        ></div>
-                      ) : (
-                        <iframe
-                          className="embed-responsive-item youtube-video"
-                          width="100%"
-                          height="400px"
-                          title={product.title}
-                          src={product.link.replace(
-                            "https://youtu.be/",
-                            "https://www.youtube.com/embed/"
-                          )}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
-                      )}
-                    </div>
-                  </Col>
-                  <Col
-                    lg={4}
-                    xs={12}
-                    md={12}
-                    sm={12}
-                    className="product-container-info"
-                  >
-                    <div className="artist-name">
-                      <h4>{artist.name}</h4>
-                      <h5>{product.title}</h5>
-                    </div>
-                    <div className="artist-info">{artist.bio}</div>
-                  </Col>
-                </Row>
-              </Container>
-            )}
-          </div>
+      <div className="artist-page">
+        <div className="artists-main-product d-flex flex-column justify-content-center align-items-center">
+          {Object.entries(product).length !== 0 && (
+            <Container
+              fluid="md"
+              className="d-flex align-items-center product-container"
+            >
+              <Row className="d-flex justify-content-center align-items-center row-product">
+                <Col lg={8} xs={12} md={12}>
+                  <div>
+                    {category === "writing" &&
+                    !artist.category[0]["writing"][0]["link"].includes(
+                      "https"
+                    ) ? (
+                      <div
+                        className="product-writing"
+                        dangerouslySetInnerHTML={{
+                          __html: product.link,
+                        }}
+                      ></div>
+                    ) : (
+                      <iframe
+                        className="embed-responsive-item youtube-video"
+                        width="100%"
+                        height="400px"
+                        title={product.title}
+                        src={product.link.replace(
+                          "https://youtu.be/",
+                          "https://www.youtube.com/embed/"
+                        )}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
+                  </div>
+                </Col>
+                <Col
+                  lg={4}
+                  xs={12}
+                  md={12}
+                  sm={12}
+                  className="product-container-info"
+                >
+                  <div className="artist-name">
+                    <h4>{artist.name}</h4>
+                    <h5>{product.title}</h5>
+                  </div>
+                  <div className="artist-info">{artist.bio}</div>
+                </Col>
+              </Row>
+            </Container>
+          )}
           <div className="d-flex justify-content-center">
             <BackToTop />
           </div>
+
+          <Footer />
         </div>
       </div>
-      <Footer />
     </Element>
   );
 };
