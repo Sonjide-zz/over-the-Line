@@ -5,10 +5,10 @@ import { Link, Element } from "react-scroll";
 import { classNamePicker } from "../../utils";
 
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
-import { DivideLine } from "../DivideLine/DivideLine";
+
 import "../ArtistsPage/ArtistsPage.css";
 
-export const ArtistsPage = ({ category, setArtist }) => {
+export const ArtistsPage = ({ category, setArtist, singleProductCheck }) => {
   const [artists, setArtists] = useState([]);
 
   const uri = process.env.REACT_APP_API;
@@ -27,14 +27,14 @@ export const ArtistsPage = ({ category, setArtist }) => {
     <>
       <Element name="artist" className="element">
         <div className="artist-page">
-          <div className="artists-main d-flex justify-content-center align-items-center">
+          <div className="artists-main d-flex justify-content-center align-items-center ">
             {category &&
               filteredArray.map((artist, index) => (
                 <Link
                   onClick={(e) => setArtist(artist)}
                   className="bubbles-link-artists"
                   activeClass="active"
-                  to="products"
+                  to={singleProductCheck !== 1 ? "products" : "product"}
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -51,7 +51,6 @@ export const ArtistsPage = ({ category, setArtist }) => {
                 </Link>
               ))}
           </div>
-          <DivideLine />
         </div>
       </Element>
     </>

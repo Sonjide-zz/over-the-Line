@@ -24,12 +24,15 @@ function App() {
       cat.hasOwnProperty(category)
     )[0][category][0];
   }
-
   return (
     <>
       <HomePage />
       <CategoriesPage setCategory={setCategory} />
-      <ArtistsPage category={category} setArtist={setArtist} />
+      <ArtistsPage
+        category={category}
+        setArtist={setArtist}
+        singleProductCheck={singleProductCheck}
+      />
       <>
         {singleProductCheck !== 1 && (
           <ProductsPage
@@ -41,9 +44,13 @@ function App() {
       </>
       <>
         {singleProductCheck !== 1 ? (
-          <ProductPage product={product} artist={artist} />
+          <ProductPage product={product} artist={artist} category={category} />
         ) : (
-          <ProductPage product={singleProduct} artist={artist} />
+          <ProductPage
+            product={singleProduct}
+            artist={artist}
+            category={category}
+          />
         )}
       </>
     </>

@@ -8,26 +8,44 @@ import PropTypes from "prop-types";
 import { BackToTop } from "../BackToTop/BackToTop";
 import "./ProductPage.css";
 
-export const ProductPage = ({ product, artist }) => {
+export const ProductPage = ({ product, artist, category }) => {
   return (
     <Element name="product" className="element">
       <div className="artist-page">
         <div className="artists-main-product d-flex flex-column justify-content-center align-items-center">
           {Object.entries(product).length !== 0 && (
-            <Container fluid="md">
+            <Container
+              fluid="md"
+              className="d-flex align-items-center product-container"
+            >
               <Row className="d-flex justify-content-center align-items-center row-product">
                 <Col lg={8} xs={12} md={12}>
                   <div>
-                    <iframe
-                      className="embed-responsive-item youtube-video"
-                      width="100%"
-                      height="400px"
-                      title="alex-video"
-                      src="https://www.youtube.com/embed/LN-CXvWu90A"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    {category === "writing" &&
+                    !artist.category[0]["writing"][0]["link"].includes(
+                      "https"
+                    ) ? (
+                      <div
+                        className="product-writing"
+                        dangerouslySetInnerHTML={{
+                          __html: product.link,
+                        }}
+                      ></div>
+                    ) : (
+                      <iframe
+                        className="embed-responsive-item youtube-video"
+                        width="100%"
+                        height="400px"
+                        title={product.title}
+                        src={product.link.replace(
+                          "https://youtu.be/",
+                          "https://www.youtube.com/embed/"
+                        )}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
                   </div>
                 </Col>
                 <Col
@@ -46,13 +64,13 @@ export const ProductPage = ({ product, artist }) => {
               </Row>
             </Container>
           )}
-        </div>
-        <div className="d-flex justify-content-center">
-          <BackToTop />
+          <div className="d-flex justify-content-center">
+            <BackToTop />
+          </div>
+
+          <Footer />
         </div>
       </div>
-
-      <Footer />
     </Element>
   );
 };

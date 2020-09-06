@@ -28,7 +28,9 @@ export const HomePage = () => {
           offset={0}
           duration={1500}
         >
-          <div className="d-flex justify-content-center link-brush">""</div>
+          <div className="d-flex justify-content-center link-brush">
+            click to go over the line
+          </div>
         </Link>
       </div>
     </>

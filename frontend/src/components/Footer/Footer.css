@@ -1,11 +1,16 @@
 .footer {
   width: 100%;
-  bottom: 0;
+
 }
 
 .footer-links {
   margin-top: 10px;
 
+}
+
+.footer-links ul {
+  margin: 0px;
+  padding: 0px;
 }
 
 .footer-links li {

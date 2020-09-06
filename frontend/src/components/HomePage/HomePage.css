@@ -36,22 +36,35 @@
 }
 
 .link-brush {
-  visibility: hidden;
+  /* visibility: hidden; */
   width: 100%;
   height: 100px;
+}
+
+.link-brush {
+  /* visibility: hidden; */
+  width: 100%;
+  height: 100px;
+  margin-top: 200px;
+  text-decoration: none;
+  color: red;
 }
 
 @media (min-aspect-ratio: 16/9) {
   #videoBG {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
   #videoBG {
     width: auto;
-    height: 750px;
+    height: 768px;
+  }
+
+  .homepage {
+    margin-top: 160px;
   }
 }
 
