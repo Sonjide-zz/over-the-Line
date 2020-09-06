@@ -12,6 +12,7 @@ function App() {
   const [category, setCategory] = useState("");
   const [product, setProduct] = useState({});
   const [artist, setArtist] = useState({});
+  const [showCategories, setShowCategories] = useState(false);
 
   let singleProductCheck;
   let singleProduct;
@@ -26,8 +27,12 @@ function App() {
   }
   return (
     <>
-      <HomePage />
-      <CategoriesPage setCategory={setCategory} />
+      {console.log(showCategories)}
+      <HomePage setShowCategories={setShowCategories} />
+      <CategoriesPage
+        setCategory={setCategory}
+        showCategories={showCategories}
+      />
       <ArtistsPage
         category={category}
         setArtist={setArtist}

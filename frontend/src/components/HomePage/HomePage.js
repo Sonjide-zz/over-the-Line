@@ -5,7 +5,7 @@ import { NavBar } from "../NavBar/NavBar";
 import BrushOver from "../../assets/brushOver.gif";
 import "./HomePage.css";
 
-export const HomePage = () => {
+export const HomePage = ({ setShowCategories }) => {
   return (
     <>
       <Element name="homepage" />
@@ -22,8 +22,10 @@ export const HomePage = () => {
         <Link
           className="h1-link"
           activeClass="active"
-          to="artists"
-          spy={true}
+          to="art"
+          onClick={() => {
+            setShowCategories(true);
+          }}
           smooth={true}
           offset={0}
           duration={1500}

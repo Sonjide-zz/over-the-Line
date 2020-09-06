@@ -6,34 +6,39 @@ import { categoriesArray } from "../../constant";
 
 import "../CategoriesPage/CategoriesPage.css";
 
-export const CategoriesPage = ({ setCategory }) => {
+export const CategoriesPage = ({ setCategory, showCategories }) => {
   return (
-    <Element name="artists" className="element">
-      <div>
-        <div className="artists-main-categories">
-          {categoriesArray.map((category, index) => (
-            <Link
-              onClick={(e) => setCategory(category.title)}
-              className="bubbles-link-artists"
-              activeClass="active"
-              to="artist"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1500}
-              key={index}
-            >
-              <div className={category.color} id={category.color}>
-                {category.title} room
-                <BubbleBorder
-                  title="bubble-border"
-                  className="bubble-border"
-                ></BubbleBorder>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </Element>
+    <>
+      <Element name="art" />
+      {showCategories ? (
+        <Element name="artists" className="element">
+          <div>
+            <div className="artists-main-categories">
+              {categoriesArray.map((category, index) => (
+                <Link
+                  onClick={(e) => setCategory(category.title)}
+                  className="bubbles-link-artists"
+                  activeClass="active"
+                  to="artist"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1500}
+                  key={index}
+                >
+                  <div className={category.color} id={category.color}>
+                    {category.title} room
+                    <BubbleBorder
+                      title="bubble-border"
+                      className="bubble-border"
+                    ></BubbleBorder>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Element>
+      ) : null}
+    </>
   );
 };
