@@ -35,12 +35,12 @@
 }
 
 .product-container {
-  height: 80vh;
+  height: 85vh;
   padding-top: 50px;
 }
 
-@media(min-width: 1440px) {
+@media(max-width: 1440px) {
   .product-container {
-    height: 85vh;
+    height: 80vh;
   }
 }
