@@ -1,9 +1,9 @@
 .bubble-border-artists {
-    position: absolute;
-    width: 140px !important;
-    height: 140px !important;
+  position: absolute;
+  width: 140px !important;
+  height: 140px !important;
 }
 
 .artists-main {
-    height: 100vh !important;
+  height: 100vh !important;
 }

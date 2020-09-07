@@ -27,7 +27,7 @@ export const ArtistsPage = ({ category, setArtist, singleProductCheck }) => {
     <>
       <Element name="artist" className="element">
         <div className="artist-page">
-          <div className="artists-main d-flex justify-content-center align-items-center ">
+          <div className="artists-main d-flex justify-content-around align-items-center ">
             {category &&
               filteredArray.map((artist, index) => (
                 <Link
