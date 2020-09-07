@@ -85,3 +85,15 @@ body {
   height: 0.5vh;
   background-color: var(--main-bg-color);
 }
+
+
+@media(max-width: 375px) {
+  .artist-page {
+    padding-top: 150px;
+  }
+
+  .element {
+    padding-top: 30px;
+  }
+
+}

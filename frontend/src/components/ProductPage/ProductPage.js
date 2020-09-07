@@ -8,10 +8,15 @@ import PropTypes from "prop-types";
 import { BackToTop } from "../BackToTop/BackToTop";
 import "./ProductPage.css";
 
-export const ProductPage = ({ product, artist, category }) => {
+export const ProductPage = ({
+  product,
+  artist,
+  category,
+  singleProductCheck,
+}) => {
   return (
     <>
-      {category ? (
+      {singleProductCheck >= 1 ? (
         <Element name="product" className="element">
           <div className="artist-page">
             <div className="artists-main-product d-flex flex-column justify-content-center align-items-center">
@@ -20,13 +25,11 @@ export const ProductPage = ({ product, artist, category }) => {
                   fluid="md"
                   className="d-flex align-items-center product-container"
                 >
+                  {console.log(product)}
                   <Row className="d-flex justify-content-center align-items-center row-product">
                     <Col lg={8} xs={12} md={12}>
                       <div>
-                        {category === "writing" &&
-                        !artist.category[0]["writing"][0]["link"].includes(
-                          "https"
-                        ) ? (
+                        {product.type === "text" ? (
                           <div
                             className="product-writing"
                             dangerouslySetInnerHTML={{
@@ -54,7 +57,6 @@ export const ProductPage = ({ product, artist, category }) => {
                       lg={4}
                       xs={12}
                       md={12}
-                      sm={12}
                       className="product-container-info"
                     >
                       <div className="artist-name">
@@ -66,7 +68,7 @@ export const ProductPage = ({ product, artist, category }) => {
                   </Row>
                 </Container>
               )}
-              <div className="d-flex justify-content-center">
+              <div className="d-flex justify-content-center back-btn">
                 <BackToTop />
               </div>
 

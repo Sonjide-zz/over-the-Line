@@ -10,21 +10,24 @@ import "./NavBar.css";
 export const NavBar = () => {
   const [navbarColor, setNavbarColor] = useState("");
   const [logos, setLogos] = useState(logo);
-  const [navbarTitle, setNavbarTitle] = useState("");
+  const [navbarTitle, setNavbarTitle] = useState("OVER-THE-LINE");
+  const [navbarTitleColor, setNavbarTitleColor] = useState("text");
   const [navbarDonateColor, setNavbarDonateColor] = useState("donate-link-red");
   const [heart, setHeart] = useState("");
 
   const listenScrollEvent = () => {
     if (window.scrollY < 290) {
       setLogos(logo);
-      setNavbarTitle("");
+      setNavbarTitle("OVER-THE-LINE");
       setNavbarDonateColor("donate-link-red");
       setHeart("heart");
+      setNavbarTitleColor("text");
       return setNavbarColor("");
     } else {
       setNavbarDonateColor("donate-link-white");
       setLogos(logo2);
       setNavbarTitle("OVER-THE-LINE");
+      setNavbarTitleColor("text-scroll");
       setHeart("heartScroll");
       return setNavbarColor("navbar-bg-color main-white");
     }
@@ -36,7 +39,7 @@ export const NavBar = () => {
 
   return (
     <Navbar className={navbarColor} sticky="top" expand="md">
-      <Navbar.Brand className="col-2" id="logo">
+      <Navbar.Brand className="" id="logo">
         <a href="http://localhost:3000" title="OVER THE LINE">
           <img
             alt="Logo"
@@ -47,7 +50,7 @@ export const NavBar = () => {
           />
         </a>
       </Navbar.Brand>
-      <div className="text-center col-8 text">
+      <div className={navbarTitleColor}>
         <h1>{navbarTitle}</h1>
       </div>
 

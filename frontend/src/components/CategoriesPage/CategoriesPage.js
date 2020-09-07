@@ -6,7 +6,11 @@ import { categoriesArray } from "../../constant";
 
 import "../CategoriesPage/CategoriesPage.css";
 
-export const CategoriesPage = ({ setCategory, showCategories }) => {
+export const CategoriesPage = ({
+  setCategory,
+  showCategories,
+  setShowArtists,
+}) => {
   return (
     <>
       <Element name="art" />
@@ -16,7 +20,10 @@ export const CategoriesPage = ({ setCategory, showCategories }) => {
             <div className="artists-main-categories">
               {categoriesArray.map((category, index) => (
                 <Link
-                  onClick={(e) => setCategory(category.title)}
+                  onClick={function () {
+                    setCategory(category.title);
+                    setShowArtists(true);
+                  }}
                   className="bubbles-link-artists"
                   activeClass="active"
                   to="artist"
