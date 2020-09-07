@@ -25,7 +25,6 @@ export const ProductPage = ({
                   fluid="md"
                   className="d-flex align-items-center product-container"
                 >
-                  {console.log(product)}
                   <Row className="d-flex justify-content-center align-items-center row-product">
                     <Col lg={8} xs={12} md={12}>
                       <div>
