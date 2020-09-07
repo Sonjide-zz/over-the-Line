@@ -6,14 +6,12 @@
 }
 
 .main-white {
-  color: var(--main-white);
+  color: var(--main-bg-color);
 }
 
 #logo {
-  margin: 0;
+  margin-left: 30px;
 }
-
-
 
 .heart path {
   fill: var(--main-bg-color);
@@ -31,6 +29,7 @@
   padding: 2px;
   font-size: 23px;
   padding: 0px !important;
+  margin-right: 30px;
 }
 
 
@@ -43,6 +42,7 @@
   justify-content: center;
   padding: 2px;
   font-size: 23px;
+  margin-right: 30px;
 }
 
 
@@ -70,8 +70,59 @@
 }
 
 
+
+.text-scroll h1 {
+  padding-top: 15px;
+  color: var(--main-white) !important;
+}
+
 .donate-link-white a:hover {
   color: var(--main-white);
   transform: scale(1.1);
   text-decoration: none;
+}
+
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+}
+
+@media(max-width: 375px) {
+  .navbar-bg-color {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navbar {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .text h1 {
+    color: var(--main-bg-color) !important;
+  }
+
+  .text-scroll h1 {
+    padding-top: 15px;
+    font-size: 24px;
+    color: var(--main-white);
+  }
+
+  .logo {
+    width: 80px;
+    height: 50px;
+    margin-left: 0px;
+  }
+
+  .donate-link-red {
+    margin-right: 0px;
+  }
+
+  .donate-link-white {
+    margin-right: 0px;
+  }
 }

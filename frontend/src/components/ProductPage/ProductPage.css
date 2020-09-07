@@ -3,7 +3,6 @@
 }
 
 .artist-info {
-  height: 100%;
   word-wrap: break-word;
   white-space: wrap;
 
@@ -28,6 +27,7 @@
   height: 400px;
   border: 1px solid red;
   padding: 20px;
+
 }
 
 .artist-page {
@@ -35,12 +35,38 @@
 }
 
 .product-container {
-  height: 80vh;
+  height: 85vh;
   padding-top: 50px;
 }
 
-@media(min-width: 1440px) {
+.col-lg-8 {
+  padding-left: 0px !important;
+}
+
+@media(max-width: 375px) {
+
+  .back-btn {
+    margin-top: 120px !important;
+  }
+}
+
+@media(max-width: 768px) {
+  .product-container-info {
+    margin-top: 20px;
+  }
+
+  .col-lg-8 {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .back-btn {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: 1440px) {
   .product-container {
-    height: 85vh;
+    height: 80vh;
   }
 }

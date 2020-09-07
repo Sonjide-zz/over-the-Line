@@ -18,3 +18,9 @@
 .back-to-top:focus {
     outline: none;
 }
+
+@media(max-width: 768px) {
+    .back-to-top {
+        margin-top: 20px;
+    }
+}

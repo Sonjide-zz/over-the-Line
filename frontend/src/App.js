@@ -12,6 +12,8 @@ function App() {
   const [category, setCategory] = useState("");
   const [product, setProduct] = useState({});
   const [artist, setArtist] = useState({});
+  const [showCategories, setShowCategories] = useState(false);
+  const [showArtists, setShowArtists] = useState(false);
 
   let singleProductCheck;
   let singleProduct;
@@ -26,12 +28,17 @@ function App() {
   }
   return (
     <>
-      <HomePage />
-      <CategoriesPage setCategory={setCategory} />
+      <HomePage setShowCategories={setShowCategories} />
+      <CategoriesPage
+        setCategory={setCategory}
+        showCategories={showCategories}
+        setShowArtists={setShowArtists}
+      />
       <ArtistsPage
         category={category}
         setArtist={setArtist}
         singleProductCheck={singleProductCheck}
+        showArtists={showArtists}
       />
       <>
         {singleProductCheck !== 1 && (
@@ -44,12 +51,18 @@ function App() {
       </>
       <>
         {singleProductCheck !== 1 ? (
-          <ProductPage product={product} artist={artist} category={category} />
+          <ProductPage
+            product={product}
+            artist={artist}
+            category={category}
+            singleProductCheck={singleProductCheck}
+          />
         ) : (
           <ProductPage
             product={singleProduct}
             artist={artist}
             category={category}
+            singleProductCheck={singleProductCheck}
           />
         )}
       </>

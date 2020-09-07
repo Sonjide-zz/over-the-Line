@@ -36,13 +36,11 @@
 }
 
 .link-brush {
-  /* visibility: hidden; */
   width: 100%;
   height: 100px;
 }
 
 .link-brush {
-  /* visibility: hidden; */
   width: 100%;
   height: 100px;
   margin-top: 200px;
@@ -65,6 +63,13 @@
 
   .homepage {
     margin-top: 160px;
+  }
+}
+
+@media(max-width: 375px) {
+
+  .text h1 {
+    font-size: 24px;
   }
 }
 

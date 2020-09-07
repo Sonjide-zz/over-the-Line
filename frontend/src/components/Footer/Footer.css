@@ -67,18 +67,16 @@
 
 .survey-btn a {
   padding: 8px 20px;
-  border: none;
-  background-color: var(--main-bg-color);
-  color: var(--main-white);
+  background-color: var(--main-bg-white);
+  color: var(--main-bg-color);
   padding-bottom: 2px;
+  border: 2px solid var(--main-bg-color);
+  border-radius: 20px;
   text-decoration: none !important;
+  font-weight: bold;
 }
 
 .survey-btn a:hover {
-  padding: 6px 12px;
-  border: none;
-  background-color: var(--main-white);
   color: var(--main-bg-color);
-  padding-bottom: 1px;
-  text-decoration: none !important;
+  border: 2px solid var(--main-bg-white);
 }
