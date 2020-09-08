@@ -4,13 +4,13 @@ jobs:
   build:
     working_directory: ~/backend
     docker:
-      - image: circleci/node@3.0.0
+      - image: circleci/node:latest
     steps:
       - checkout
   build2:
     working_directory: ~/frontend
     docker:
-      - image: circleci/node@3.0.0
+      - image: circleci/node:latest
     steps:
       - checkout
 
