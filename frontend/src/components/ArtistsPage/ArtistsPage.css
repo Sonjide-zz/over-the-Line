@@ -7,3 +7,23 @@
 .artists-main {
   height: 100vh !important;
 }
+
+.artists {
+  width: 1200px;
+  flex-wrap: wrap;
+
+}
+
+@media(max-width: 375px) {
+  .artists-main-categories {
+    margin-top: 100px;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .artists-main-product {
+    padding-top: 80px;
+  }
+
+}

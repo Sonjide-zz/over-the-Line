@@ -35,28 +35,30 @@ export const ArtistsPage = ({
         <Element name="artist" className="element">
           <div className="artist-page">
             <div className="artists-main d-flex justify-content-center align-items-center ">
-              {category &&
-                filteredArray.map((artist, index) => (
-                  <Link
-                    onClick={(e) => setArtist(artist)}
-                    className="bubbles-link-artists"
-                    activeClass="active"
-                    to={singleProductCheck !== 1 ? "products" : "product"}
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={1500}
-                    key={index}
-                  >
-                    <div className={classNamePicker(category)}>
-                      {artist.name}
-                      <BubbleBorder
-                        title="bubble-border"
-                        className="bubble-border-artists"
-                      ></BubbleBorder>
-                    </div>
-                  </Link>
-                ))}
+              <div className="d-flex justify-content-center align-items-center artists">
+                {category &&
+                  filteredArray.map((artist, index) => (
+                    <Link
+                      onClick={(e) => setArtist(artist)}
+                      className="bubbles-link-artists"
+                      activeClass="active"
+                      to={singleProductCheck !== 1 ? "products" : "product"}
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={1500}
+                      key={index}
+                    >
+                      <div className={classNamePicker(category)}>
+                        {artist.name}
+                        <BubbleBorder
+                          title="bubble-border"
+                          className="bubble-border-artists"
+                        ></BubbleBorder>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
             </div>
           </div>
         </Element>
