@@ -7,12 +7,18 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run:
+          name: docker backend
+          command: docker-compose up
   build2:
     working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run:
+          name: docker frontend
+          command: docker-compose up
 
 workflows:
   version: 2.1
