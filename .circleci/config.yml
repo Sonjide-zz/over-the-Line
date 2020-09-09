@@ -7,21 +7,17 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: docker backend
-          command: docker-compose up
+      - run: npm install
   build2:
     working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: docker frontend
-          command: docker-compose up
+      - run: npm install
 
 workflows:
-  version: 2.1
+  version: 2
 
   my_workflow:
     jobs:
