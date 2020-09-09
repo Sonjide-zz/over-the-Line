@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/backend
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+  build2:
+    working_directory: ~/frontend
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+
+workflows:
+  version: 2.1
+
+  my_workflow:
+    jobs:
+      - build
+      - build2:
+          requires:
+            - build

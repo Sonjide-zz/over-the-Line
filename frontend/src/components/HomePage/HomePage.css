@@ -67,15 +67,14 @@
 }
 
 @media(max-width: 375px) {
+  #videoBG {
+    width: auto;
+    height: auto;
+    margin-bottom: 200px;
+    margin-left: 10px;
+  }
 
   .text h1 {
     font-size: 24px;
   }
-}
-
-@media (max-width: 767px) {
-  #videoBG {
-    display: none;
-  }
-
 }

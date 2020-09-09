@@ -28,6 +28,7 @@ body {
   flex-wrap: wrap;
 }
 
+
 .artists-main-product {
   display: flex;
   align-items: center;
@@ -139,12 +140,15 @@ body {
 
 
 @media(max-width: 375px) {
-  .artist-page {
-    padding-top: 150px;
-  }
+
 
   .element {
     padding-top: 30px;
+  }
+
+  .artists-main {
+    padding-top: 40px;
+    margin-top: 80px;
   }
 
 }
