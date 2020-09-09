@@ -2,6 +2,7 @@
 
 #### Description of the project
 
+test
 New website that hosts Compass Collective students artworks to make these publicly available. Also build/leverage tools that enable Compass Collective to upload, amend and take down any artwork from the site.
 
 Target Audience - publicly available.
