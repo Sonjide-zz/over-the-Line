@@ -8,6 +8,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: docker-compose up
   build2:
     working_directory: ~/frontend
     docker:
@@ -15,6 +16,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: docker-compose up
 
 workflows:
   version: 2
