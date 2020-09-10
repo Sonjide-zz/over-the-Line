@@ -63,6 +63,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .survey-btn a {
@@ -79,4 +80,14 @@
 .survey-btn a:hover {
   color: var(--main-bg-color);
   border: 2px solid var(--main-bg-white);
+}
+
+@media(max-width: 375px) {
+  .footer {
+    margin-top: 20px;
+  }
+
+  .survey-btn {
+    margin-top: 20px;
+  }
 }

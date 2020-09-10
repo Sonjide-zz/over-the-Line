@@ -51,10 +51,7 @@ export const ArtistsPage = ({
                     >
                       <div className={classNamePicker(category)}>
                         {artist.name}
-                        <BubbleBorder
-                          title="bubble-border"
-                          className="bubble-border-artists"
-                        ></BubbleBorder>
+                        <BubbleBorder className="bubble-border-artists"></BubbleBorder>
                       </div>
                     </Link>
                   ))}

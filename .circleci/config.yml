@@ -13,9 +13,8 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-
 workflows:
-  version: 2.1
+  version: 2
 
   my_workflow:
     jobs:
