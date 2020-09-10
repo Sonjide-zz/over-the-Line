@@ -19,13 +19,10 @@ export const ProductPage = ({
       {singleProductCheck >= 1 ? (
         <Element name="product" className="element">
           <div className="artist-page">
-            <div className="artists-main-product d-flex flex-column justify-content-center align-items-center">
+            <div className="artists-main-products d-flex flex-column justify-content-center align-items-center">
               {Object.entries(product).length !== 0 && (
-                <Container
-                  fluid="md"
-                  className="d-flex align-items-center product-container"
-                >
-                  <Row className="d-flex justify-content-center align-items-center row-product">
+                <Container>
+                  <Row className="d-flex justify-content-center align-items-center product-container">
                     <Col lg={8} xs={12} md={12}>
                       <div>
                         {product.type === "text" ? (
