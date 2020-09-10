@@ -1,29 +1,29 @@
 version: 2.1
 
 jobs:
-  build:
+  backend_build:
     working_directory: ~/backend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: npm install
-      - run: docker-compose up
-  build2:
+      - run: cd backend && npm install
+
+  frontend_build:
     working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
       - run: npm install
-      - run: docker-compose up
+      - run: cd frontend && npm run build
 
 workflows:
   version: 2
 
   my_workflow:
     jobs:
-      - build
-      - build2:
+      - backend_build
+      - frontend_build:
           requires:
-            - build
+            - backend_build
