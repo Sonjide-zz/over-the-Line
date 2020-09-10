@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - run: cd frontend && npm install
-      - run: cd frontend && docker build -t over-the-line_frontend_1 .
+      - run: cd frontend && docker build -t frontend .
 workflows:
   version: 2
 
