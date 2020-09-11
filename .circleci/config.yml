@@ -1,24 +1,40 @@
 version: 2.1
 
 jobs:
-  build:
+  backend_build:
     working_directory: ~/backend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-  build2:
+      - run:
+          name: Install dependencies
+          command: cd backend && npm install
+      - run:
+          name: Lint project
+          command: cd backend && npm run lint
+
+  frontend_build:
     working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run:
+          name: Install dependencies
+          command: cd frontend && npm install
+      - run:
+          name: Lint project
+          command: cd frontend && npm run lint
+      - run:
+          name: frontend_build
+          command: cd frontend && npm run build
 workflows:
   version: 2
 
   my_workflow:
     jobs:
-      - build
-      - build2:
+      - backend_build
+      - frontend_build:
           requires:
-            - build
+            - backend_build

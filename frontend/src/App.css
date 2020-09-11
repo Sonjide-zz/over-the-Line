@@ -9,8 +9,8 @@
   --main-orange: #f17517;
 }
 
-body {
-  font-family: "Baloo Tamma 2", cursive !important;
+#no-bootstrap {
+  font-family: "Baloo Tamma 2", cursive;
 }
 
 /* multiple-artist page */
