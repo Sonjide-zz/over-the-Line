@@ -11,7 +11,7 @@ jobs:
           name: Install dependencies
           command: cd backend && npm install
       - run:
-          name: Lint and test
+          name: Lint project
           command: cd backend && npm run lint
 
   frontend_build:
@@ -24,7 +24,7 @@ jobs:
           name: Install dependencies
           command: cd frontend && npm install
       - run:
-          name: Lint project & run test
+          name: Lint project
           command: cd frontend && npm run lint
       - run:
           name: frontend_build
