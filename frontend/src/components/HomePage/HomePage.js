@@ -1,5 +1,6 @@
 import React from "react";
 
+import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 import { NavBar } from "../NavBar/NavBar";
 import BrushOver from "../../assets/brushOver.gif";
@@ -37,4 +38,7 @@ export const HomePage = ({ setShowCategories }) => {
       </div>
     </>
   );
+};
+HomePage.propTypes = {
+  setShowCategories: PropTypes.func,
 };

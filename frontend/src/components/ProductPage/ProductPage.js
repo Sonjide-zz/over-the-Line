@@ -8,12 +8,7 @@ import PropTypes from "prop-types";
 import { BackToTop } from "../BackToTop/BackToTop";
 import "./ProductPage.css";
 
-export const ProductPage = ({
-  product,
-  artist,
-  category,
-  singleProductCheck,
-}) => {
+export const ProductPage = ({ product, artist, singleProductCheck }) => {
   return (
     <>
       {singleProductCheck >= 1 ? (
@@ -83,4 +78,5 @@ export const ProductPage = ({
 ProductPage.propTypes = {
   product: PropTypes.object,
   artist: PropTypes.object,
+  singleProductCheck: PropTypes.number,
 };
