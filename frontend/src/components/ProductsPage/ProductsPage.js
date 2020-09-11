@@ -19,7 +19,7 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
                   .filter((cat) => cat.hasOwnProperty(category))[0]
                   [category].map((product, index) => (
                     <Link
-                      onClick={(e) => setProduct(product)}
+                      onClick={() => setProduct(product)}
                       className="bubbles-link-artists"
                       activeClass="active"
                       to="product"
@@ -53,4 +53,5 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
 ProductsPage.propTypes = {
   category: PropTypes.string,
   artist: PropTypes.object,
+  setProduct: PropTypes.func,
 };

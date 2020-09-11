@@ -66,4 +66,7 @@ export const ArtistsPage = ({
 
 ArtistsPage.propTypes = {
   category: PropTypes.string,
+  setArtist: PropTypes.func,
+  singleProductCheck: PropTypes.number,
+  showArtists: PropTypes.bool,
 };

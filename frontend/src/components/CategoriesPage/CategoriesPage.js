@@ -1,5 +1,6 @@
 import React from "react";
 
+import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 import { categoriesArray } from "../../constant";
@@ -48,4 +49,9 @@ export const CategoriesPage = ({
       ) : null}
     </>
   );
+};
+CategoriesPage.propTypes = {
+  setCategory: PropTypes.func,
+  showCategories: PropTypes.bool,
+  setShowArtists: PropTypes.func,
 };
