@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Docker push containers
           command: |
-            docker push $CYF_PRIVATE_REPO/otl-be
+            cd backend && docker push $CYF_PRIVATE_REPO/otl-be
 
   frontend_build:
     working_directory: ~/frontend
