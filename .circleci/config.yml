@@ -7,6 +7,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Install dependencies
           command: cd backend && npm install
