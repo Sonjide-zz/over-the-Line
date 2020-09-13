@@ -23,6 +23,12 @@ jobs:
             cd backend && docker build -t $CYF_PRIVATE_REPO/otl-be:$VERSION --build-arg version=$VERSION .
             docker tag $CYF_PRIVATE_REPO/otl-be:$VERSION $CYF_PRIVATE_REPO/otl-be:latest
       - run:
+          name: Install some dependencies
+          command: |
+            sudo apt update
+            sudo apt install -y python3 python3-pip python3-setuptools groff
+            sudo pip3 install --upgrade pip
+      - run:
           name: Install awscli
           command: sudo pip install awscli
       - run:
@@ -31,7 +37,7 @@ jobs:
       - run:
           name: Docker push containers
           command: |
-            cd backend && docker push $CYF_PRIVATE_REPO/otl-be
+            docker push $CYF_PRIVATE_REPO/otl-be
   # frontend_build:
   #   working_directory: ~/frontend
   #   commands:
