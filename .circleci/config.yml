@@ -58,4 +58,5 @@ workflows:
 
   my_workflow:
     jobs:
-      - backend_build
+      - backend_build:
+          context: build
