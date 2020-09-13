@@ -12,7 +12,7 @@ commands:
       - run: |
           aws configure set preview.cloudfront true
       - run: |
-          aws s3 sync ./production s3://<< parameters.to >> \
+          aws s3 sync ./frontend/build s3://<< parameters.to >> \
             --acl public-read --delete \
             --cache-control max-age=31536000
       - run: |
@@ -73,15 +73,32 @@ jobs:
           root: .
           paths:
             - frontend/build
-
+  deploy_production:
+    docker:
+      - image: circleci/python
+    working_directory: ~/frontend/build
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/frontend/build
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - s3deploy_production:
+          to: "over-the-line.uk"
+          cf_distribution_id: "E2N0RA4UHF7AR2"
 workflows:
   version: 2
 
   my_workflow:
     jobs:
-      # - backend_build:
-      #     context: build
+      - backend_build:
+          context: build
       - build_production:
           context: build
-          # requires:
-          #   - backend_build
+          requires:
+            - backend_build
+      - deploy_production:
+          context: deployments
+          requires:
+            - build_production
