@@ -71,15 +71,16 @@ jobs:
       - run: cd frontend && npm run build
       - persist_to_workspace:
           root: .
-          paths: build
+          paths:
+            - build
 
 workflows:
   version: 2
 
   my_workflow:
     jobs:
-      - backend_build:
-          context: build
+      # - backend_build:
+      #     context: build
       - build_production:
           context: build
           # requires:
