@@ -19,8 +19,8 @@ jobs:
       - run:
           name: Docker build api
           command: |
-            cd backend && docker build -t ${CYF_PRIVATE_REPO}/otl-be:${VERSION} --build-arg version=${VERSION} .
-            docker tag ${CYF_PRIVATE_REPO}/otl-be:${VERSION} ${CYF_PRIVATE_REPO}/otl-be:latest
+            cd backend && docker build -t $CYF_PRIVATE_REPO/otl-be:$VERSION --build-arg version=$VERSION .
+            docker tag $CYF_PRIVATE_REPO/otl-be:$VERSION $CYF_PRIVATE_REPO/otl-be:latest
       - run:
           name: Install awscli
           command: sudo npm install awscli
