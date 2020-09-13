@@ -31,28 +31,31 @@ jobs:
           name: Docker push containers
           command: |
             cd backend && docker push $CYF_PRIVATE_REPO/otl-be
+  # frontend_build:
+  #   working_directory: ~/frontend
+  #   commands:
+  #     s3deploy_production:
+  #       description: "Deploy to S3"
+  #       parameters:
+  #         to:
+  #           type: string
+  #         cf_distribution_id:
+  #           type: string
+  #       steps:
+  #         - run: |
+  #             aws configure set preview.cloudfront true
+  #         - run: |
+  #             aws s3 sync ./production s3://<< parameters.to >> \
+  #               --acl public-read --delete \
+  #               --cache-control max-age=31536000
+  #         - run: |
+  #             aws cloudfront create-invalidation \
+  #                 --distribution-id << parameters.cf_distribution_id >> \
+  #                 --paths /\*
 
-  frontend_build:
-    working_directory: ~/frontend
-    docker:
-      - image: circleci/node:13.8.0
-    steps:
-      - checkout
-      - run:
-          name: Install dependencies
-          command: cd frontend && npm install
-      - run:
-          name: Lint project
-          command: cd frontend && npm run lint
-      - run:
-          name: frontend_build
-          command: cd frontend && npm run build
 workflows:
   version: 2
 
   my_workflow:
     jobs:
       - backend_build
-      - frontend_build:
-          requires:
-            - backend_build
