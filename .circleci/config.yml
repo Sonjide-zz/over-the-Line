@@ -67,8 +67,8 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/frontend
-      - run: npm install
-      - run: npm run build
+      - run: cd frontend && npm install
+      - run: cd frontend && npm run build
       - persist_to_workspace:
           root: .
           paths: [build]
