@@ -24,7 +24,7 @@ jobs:
             docker tag $CYF_PRIVATE_REPO/otl-be:$VERSION $CYF_PRIVATE_REPO/otl-be:latest
       - run:
           name: Install awscli
-          command: sudo npm install awscli
+          command: sudo pip install awscli
       - run:
           name: Docker login to CYF Repo
           command: $(aws ecr get-login --no-include-email)
