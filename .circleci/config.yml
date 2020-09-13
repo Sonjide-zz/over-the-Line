@@ -80,7 +80,7 @@ workflows:
     jobs:
       - backend_build:
           context: build
-      - frontend_build:
+      - build_production:
           context: build
           requires:
             - backend_build
