@@ -59,7 +59,7 @@ jobs:
           command: |
             docker push $CYF_PRIVATE_REPO/otl-be
 
-  deploy_backend_production:
+  deploy_backend:
     docker:
       - image: circleci/python:2.7-jessie
     working_directory: ~/backend
@@ -98,7 +98,7 @@ jobs:
       - run:
           name: Update k8s deployments
           command: |
-            KUBECONFIG=$(pwd)/config ./kubectl set image deployment/api-otl-be cyf-api=$CYF_PRIVATE_REPO/otl-be:$VERSION
+            KUBECONFIG=$(pwd)/config ./kubectl set image deployment/otl-api otl-api=$CYF_PRIVATE_REPO/otl-be:$VERSION
       - run:
           name: Remove runner IP from SG
           command: |
@@ -109,7 +109,7 @@ jobs:
               --port ${K8S_MASTER_PORT} \
               --cidr "${PUBLIC_IP}/32"
 
-  build_production:
+  frontend_build:
     docker:
       - image: circleci/node:8.12.0
     working_directory: ~/frontend
@@ -125,7 +125,7 @@ jobs:
           root: .
           paths:
             - frontend/build
-  deploy_production:
+  deploy_frontend:
     docker:
       - image: circleci/python
     working_directory: ~/frontend/build
@@ -146,7 +146,7 @@ workflows:
     jobs:
       - backend_build:
           context: build
-      - deploy_backend_production:
+      - deploy_backend:
           context: deployments
           requires:
             - backend_build
@@ -154,15 +154,16 @@ workflows:
           #   branches:
           #     only:
           #       - develop
-      - build_production:
+      - frontend_build:
           context: build
           requires:
             - backend_build
-            - deploy_backend_production
-      - deploy_production:
+            - deploy_backend
+      - deploy_frontend:
           context: deployments
           requires:
-            - deploy_backend_production
+            - frontend_build
+            - deploy_backend
           # filters:
           #   branches:
           #     only:
