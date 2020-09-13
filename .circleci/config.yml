@@ -59,6 +59,56 @@ jobs:
           command: |
             docker push $CYF_PRIVATE_REPO/otl-be
 
+deploy_backend_production:
+  docker:
+    - image: circleci/python:2.7-jessie
+  working_directory: ~/backend
+  steps:
+    - setup_remote_docker
+    - run:
+        name: Set env variables
+        command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
+    - run:
+        name: Get runner public IP
+        command: echo 'export PUBLIC_IP=$(wget -qO- http://checkip.amazonaws.com)' >> $BASH_ENV
+    - run:
+        name: Install awscli
+        command: sudo pip install awscli
+    - run:
+        name: Whitelist runner public IP
+        command: |
+          aws ec2 authorize-security-group-ingress \
+          --region ${AWS_REGION} \
+          --group-id ${AWS_K8S_MASTER_SG} \
+          --ip-permissions "[{\"IpProtocol\": \"tcp\", \"FromPort\": ${K8S_MASTER_PORT}, \"ToPort\": ${K8S_MASTER_PORT}, \"IpRanges\": [{\"CidrIp\": \"${PUBLIC_IP}/32\", \"Description\":\"${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BUILD_NUM}\"  }]}]"
+    - run:
+        name: Install kubectl
+        command: |
+          curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+          chmod +x kubectl
+    - run:
+        name: Install gnupg
+        command: sudo apt-get -y install gnupg
+    - run:
+        name: Get kubeconfig
+        command: aws s3 cp s3://$SECRETS_BUCKET/kubectl/config_cyfbot.gpg ./config.gpg
+    - run:
+        name: Decrypt kubeconfig and set KUBECONFIG
+        command: gpg --yes --passphrase="$GPG_KEY" config.gpg
+    - run:
+        name: Update k8s deployments
+        command: |
+          KUBECONFIG=$(pwd)/config ./kubectl set image deployment/otl-be-api cyf-api=$CYF_PRIVATE_REPO/otl-be:$VERSION
+    - run:
+        name: Remove runner IP from SG
+        command: |
+          aws ec2 revoke-security-group-ingress \
+            --region ${AWS_REGION} \
+            --group-id ${AWS_K8S_MASTER_SG} \
+            --protocol tcp \
+            --port ${K8S_MASTER_PORT} \
+            --cidr "${PUBLIC_IP}/32"
+
   build_production:
     docker:
       - image: circleci/node:8.12.0
@@ -96,6 +146,14 @@ workflows:
     jobs:
       - backend_build:
           context: build
+      - deploy_backend_production:
+          context: deployments
+          requires:
+            - backend_build
+          filters:
+            branches:
+              only:
+                - develop
       - build_production:
           context: build
           requires:
@@ -104,3 +162,7 @@ workflows:
           context: deployments
           requires:
             - build_production
+          filters:
+            branches:
+              only:
+                - develop
