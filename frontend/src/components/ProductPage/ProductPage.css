@@ -38,6 +38,10 @@
   padding-top: 30px;
 }
 
+.product {
+  padding-top: 50px;
+}
+
 .col-lg-8 {
   padding-left: 0px !important;
 }
@@ -73,6 +77,10 @@
 
   .back-btn {
     margin-top: 40px;
+  }
+
+  .product-container {
+    height: 85vh;
   }
 }
 
