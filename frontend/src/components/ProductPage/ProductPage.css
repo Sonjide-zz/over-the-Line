@@ -3,8 +3,7 @@
 }
 
 .artist-info {
-  word-wrap: break-word;
-  white-space: wrap;
+  height: 500px;
 
 }
 
@@ -50,12 +49,13 @@
     margin-top: 120px !important;
   }
 
-  .artists-main-products {
-    margin-top: 180px;
+  .product-container {
+    margin-top: 10rem;
   }
 
+
   .product-container-info {
-    height: 300px;
+    height: 400px;
 
   }
 

@@ -14,9 +14,26 @@
 
 }
 
+.artist_bubbles {
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media(max-width: 375px) {
   .artists-main-categories {
-    margin-top: 100px;
+    margin-top: 60px;
+  }
+
+  .artists {
+    margin-top: 140px;
+
+  }
+
+  .bubble-border-artists {
+    position: absolute;
+    width: 110px !important;
+    height: 110px !important;
   }
 
 }

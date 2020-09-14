@@ -19,30 +19,32 @@ export const CategoriesPage = ({
         <Element name="artists" className="element">
           <div>
             <div className="artists-main-categories">
-              {categoriesArray.map((category, index) => (
-                <Link
-                  onClick={function () {
-                    setCategory(category.title);
-                    setShowArtists(true);
-                  }}
-                  className="bubbles-link-artists"
-                  activeClass="active"
-                  to="artist"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={1500}
-                  key={index}
-                >
-                  <div className={category.color} id={category.color}>
-                    {category.title} room
-                    <BubbleBorder
-                      title="bubble-border"
-                      className="bubble-border"
-                    ></BubbleBorder>
-                  </div>
-                </Link>
-              ))}
+              <div className="categories_bubbles d-flex">
+                {categoriesArray.map((category, index) => (
+                  <Link
+                    onClick={function () {
+                      setCategory(category.title);
+                      setShowArtists(true);
+                    }}
+                    className="bubbles-link-artists"
+                    activeClass="active"
+                    to="artist"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={1500}
+                    key={index}
+                  >
+                    <div className={category.color} id={category.color}>
+                      {category.title} room
+                      <BubbleBorder
+                        title="bubble-border"
+                        className="bubble-border"
+                      ></BubbleBorder>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </Element>

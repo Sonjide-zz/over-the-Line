@@ -24,3 +24,9 @@
         margin-top: 20px;
     }
 }
+
+@media(max-width: 375px) {
+    .back-to-top {
+        margin-top: 15em !important;
+    }
+}

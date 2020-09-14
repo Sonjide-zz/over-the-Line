@@ -36,25 +36,27 @@ export const ArtistsPage = ({
           <div className="artist-page">
             <div className="artists-main d-flex justify-content-center align-items-center ">
               <div className="d-flex justify-content-center align-items-center artists">
-                {category &&
-                  filteredArray.map((artist, index) => (
-                    <Link
-                      onClick={(e) => setArtist(artist)}
-                      className="bubbles-link-artists"
-                      activeClass="active"
-                      to={singleProductCheck !== 1 ? "products" : "product"}
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={1500}
-                      key={index}
-                    >
-                      <div className={classNamePicker(category)}>
-                        {artist.name}
-                        <BubbleBorder className="bubble-border-artists"></BubbleBorder>
-                      </div>
-                    </Link>
-                  ))}
+                <div className="artist_bubbles d-flex">
+                  {category &&
+                    filteredArray.map((artist, index) => (
+                      <Link
+                        onClick={(e) => setArtist(artist)}
+                        className="bubbles-link-artists"
+                        activeClass="active"
+                        to={singleProductCheck !== 1 ? "products" : "product"}
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={1500}
+                        key={index}
+                      >
+                        <div className={classNamePicker(category)}>
+                          {artist.name}
+                          <BubbleBorder className="bubble-border-artists"></BubbleBorder>
+                        </div>
+                      </Link>
+                    ))}
+                </div>
               </div>
             </div>
           </div>

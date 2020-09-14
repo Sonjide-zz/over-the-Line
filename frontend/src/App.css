@@ -140,15 +140,16 @@
 
 
 @media(max-width: 375px) {
-
-
   .element {
     padding-top: 30px;
   }
 
-  .artists-main {
-    padding-top: 40px;
-    margin-top: 80px;
+  .yellow,
+  .blue,
+  .orange {
+    width: 90px;
+    height: 90px;
+
   }
 
 }
