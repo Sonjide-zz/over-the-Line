@@ -150,10 +150,10 @@ workflows:
           context: deployments
           requires:
             - backend_build
-          # filters:
-          #   branches:
-          #     only:
-          #       - develop
+          filters:
+            branches:
+              only:
+                - develop
       - frontend_build:
           context: build
           requires:
@@ -164,7 +164,7 @@ workflows:
           requires:
             - frontend_build
             - deploy_backend
-          # filters:
-          #   branches:
-          #     only:
-          #       - develop
+          filters:
+            branches:
+              only:
+                - develop
