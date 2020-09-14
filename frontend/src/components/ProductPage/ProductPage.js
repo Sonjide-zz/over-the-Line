@@ -14,7 +14,7 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
       {singleProductCheck >= 1 ? (
         <Element name="product" className="element">
           <div className="artist-page">
-            <div className="artists-main-products d-flex flex-column justify-content-center align-items-center">
+            <div>
               {Object.entries(product).length !== 0 && (
                 <Container>
                   <Row className="d-flex justify-content-center align-items-center product-container">
@@ -59,12 +59,12 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
                   </Row>
                 </Container>
               )}
-              <div className="d-flex justify-content-center back-btn">
-                <BackToTop />
-              </div>
-
-              <Footer />
             </div>
+            <div className="d-flex justify-content-center back-btn">
+              <BackToTop />
+            </div>
+
+            <Footer />
           </div>
         </Element>
       ) : null}
