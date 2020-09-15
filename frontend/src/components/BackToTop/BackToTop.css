@@ -9,6 +9,8 @@
     cursor: pointer;
     outline: none;
     z-index: 10;
+
+    padding-bottom: 3px;
 }
 
 .back-to-top:hover {
@@ -20,14 +22,6 @@
     outline: none;
 }
 
-@media(max-width: 768px) {
-    .back-to-top {
-        margin-top: 20px;
-    }
-}
+@media(max-width: 768px) {}
 
-@media(max-width: 375px) {
-    .back-to-top {
-        margin-top: 15em !important;
-    }
-}
+@media(max-width: 375px) {}

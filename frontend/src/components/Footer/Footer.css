@@ -1,13 +1,12 @@
 .footer {
   width: 100% !important;
   background-color: var(--main-white);
-
+  display: flex;
+  justify-content: center;
+  height: 200px;
 }
 
-.footer-links {
-  margin-top: 10px;
 
-}
 
 .footer-links ul {
   margin: 0px;
@@ -46,9 +45,7 @@
   box-shadow: none !important;
 }
 
-.social {
-  margin-top: 30px;
-}
+
 
 .social-list {
   padding: 0px;
@@ -64,7 +61,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 }
 
 .survey-btn a {
@@ -83,12 +79,26 @@
   border: 2px solid var(--main-bg-white);
 }
 
+.copyFooter a {
+  color: var(--main-black);
+  text-decoration: none !important;
+
+}
+
+.copyFooter a:hover {
+  color: var(--main-bg-color);
+}
+
 @media(max-width: 375px) {
   .footer {
-    margin-top: 20px;
+    margin-top: 15em;
   }
 
   .survey-btn {
+    margin-top: 20px;
+  }
+
+  .copyFooter {
     margin-top: 20px;
   }
 }

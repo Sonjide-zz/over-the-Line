@@ -7,6 +7,11 @@
   --main-blue: #48b2d7;
   --main-yellow: #ffff00;
   --main-orange: #f17517;
+
+}
+
+.App {
+  text-align: center;
 }
 
 #no-bootstrap {
@@ -20,6 +25,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .artists-main {
   display: flex;
@@ -151,5 +157,10 @@
     height: 90px;
 
   }
+
+  .section-line {
+    display: none;
+  }
+
 
 }

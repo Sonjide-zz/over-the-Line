@@ -1,12 +1,22 @@
 .artists-main-categories {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
     height: 100vh;
     margin-top: 20px;
 }
 
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+
+.row {
+    margin-top: 25px;
+}
 
 #blue {
     width: 150px;
@@ -19,7 +29,7 @@
     width: 150px;
     height: 150px;
     border: none;
-    margin-top: 15em;
+    margin-top: 10em;
 }
 
 #yellow {
@@ -33,6 +43,8 @@
     position: relative;
     flex-wrap: wrap;
     justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bubble-border {

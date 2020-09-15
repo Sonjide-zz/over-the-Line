@@ -8,6 +8,15 @@
   height: 100vh !important;
 }
 
+.container-fluid {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+
+
+
 .artists {
   width: 1200px;
   flex-wrap: wrap;
@@ -21,26 +30,16 @@
 }
 
 @media(max-width: 375px) {
-  .artists-main-categories {
-    margin-top: 60px;
-  }
 
-  .artists {
-    margin-top: 140px;
 
+  .writing-container {
+    margin-top: 15em !important;
   }
 
   .bubble-border-artists {
     position: absolute;
     width: 110px !important;
     height: 110px !important;
-  }
-
-}
-
-@media(max-width: 768px) {
-  .artists-main-product {
-    padding-top: 80px;
   }
 
 }

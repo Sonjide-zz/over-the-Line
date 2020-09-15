@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Link, Element } from "react-scroll";
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 import { categoriesArray } from "../../constant";
+import { Container, Row, Col } from "react-bootstrap";
 
 import "../CategoriesPage/CategoriesPage.css";
 
@@ -14,13 +15,13 @@ export const CategoriesPage = ({
 }) => {
   return (
     <>
-      <Element name="art" />
+      {/* <Element name="art" /> */}
       {showCategories ? (
         <Element name="artists" className="element">
-          <div>
-            <div className="artists-main-categories">
-              <div className="categories_bubbles d-flex">
-                {categoriesArray.map((category, index) => (
+          <Container fluid>
+            <Row>
+              {categoriesArray.map((category, index) => (
+                <Col>
                   <Link
                     onClick={function () {
                       setCategory(category.title);
@@ -37,16 +38,13 @@ export const CategoriesPage = ({
                   >
                     <div className={category.color} id={category.color}>
                       {category.title} room
-                      <BubbleBorder
-                        title="bubble-border"
-                        className="bubble-border"
-                      ></BubbleBorder>
+                      <BubbleBorder className="bubble-border"></BubbleBorder>
                     </div>
                   </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
         </Element>
       ) : null}
     </>

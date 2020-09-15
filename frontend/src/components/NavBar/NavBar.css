@@ -2,15 +2,15 @@
   background-color: var(--main-bg-color);
   transition: ease-in-out 0.5s;
   z-index: 1;
-  padding: 0 !important
 }
+
 
 .main-white {
   color: var(--main-bg-color);
 }
 
 #logo {
-  margin-left: 30px;
+  margin-right: 0rem !important;
 }
 
 .heart path {
@@ -22,27 +22,18 @@
 }
 
 .donate-link-red {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--main-black);
   padding: 2px;
   font-size: 23px;
   padding: 0px !important;
-  margin-right: 30px;
 }
-
-
-
 
 .donate-link-white {
   color: var(--main-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 2px;
   font-size: 23px;
-  margin-right: 30px;
+  padding: 0px !important;
+
 }
 
 
@@ -61,19 +52,23 @@
 
 }
 
+
 .donate-link-white a {
   color: var(--main-white);
   cursor: pointer;
-  padding: 5px 10px;
   text-decoration: none;
   padding-bottom: 2px;
+  padding: 5px 10px;
 }
 
-
+.navbar-expand {
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
 
 .text-scroll h1 {
-  padding-top: 15px;
   color: var(--main-white) !important;
+  margin-top: 15px;
 }
 
 .donate-link-white a:hover {
@@ -82,47 +77,39 @@
   text-decoration: none;
 }
 
-.navbar {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
 
-}
 
-@media(max-width: 375px) {
-  .navbar-bg-color {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 
-  .navbar {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 
-  .text h1 {
-    color: var(--main-bg-color) !important;
-  }
+@media(max-width: 320px) {
 
   .text-scroll h1 {
-    padding-top: 15px;
-    font-size: 28px;
+    font-size: 20px;
     color: var(--main-white);
+    margin-top: 10px;
   }
 
   .logo {
     width: 100px;
     height: 60px;
-    margin-left: 0px;
   }
 
   .donate-link-red {
-    margin-right: 0px;
+    color: var(--main-black);
+    padding: 2px;
+    font-size: 13px;
+    padding: 0px !important;
   }
 
-  .donate-link-white {
-    margin-right: 0px;
+
+
+}
+
+@media(max-width: 768px) {
+
+  .text-scroll h1 {
+    font-size: 24px;
   }
+
+
 }
