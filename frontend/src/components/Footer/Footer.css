@@ -1,6 +1,7 @@
 .footer {
   width: 100% !important;
-  background-color: var(--main-white)
+  background-color: var(--main-white);
+
 }
 
 .footer-links {

@@ -14,7 +14,7 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
       {singleProductCheck >= 1 ? (
         <Element name="product" className="element">
           <div className="artist-page">
-            <div>
+            <div className="product">
               {Object.entries(product).length !== 0 && (
                 <Container>
                   <Row className="d-flex justify-content-center align-items-center product-container">

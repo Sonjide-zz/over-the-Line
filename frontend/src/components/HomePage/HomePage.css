@@ -80,3 +80,11 @@
 
 
 }
+
+@media(max-width: 768px) {
+  .homepage {
+    margin-top: 170px;
+  }
+
+
+}
