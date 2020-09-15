@@ -1,0 +1,94 @@
+.footer {
+  width: 100% !important;
+  background-color: var(--main-white);
+
+}
+
+.footer-links {
+  margin-top: 10px;
+
+}
+
+.footer-links ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-links li {
+  list-style-type: none;
+}
+
+.footer-links li a:hover {
+  color: var(--main-bg-color);
+  text-decoration: none !important;
+}
+
+.div-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-links a {
+  margin: 5px;
+  color: var(--main-black);
+  text-decoration: none !important;
+}
+
+#dropdown-basic {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--main-black) !important;
+  outline: none !important;
+  margin-top: -1px;
+}
+
+#dropdown-basic:focus {
+  box-shadow: none !important;
+}
+
+.social {
+  margin-top: 30px;
+}
+
+.social-list {
+  padding: 0px;
+}
+
+.social li {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+
+.survey-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.survey-btn a {
+  padding: 8px 20px;
+  background-color: var(--main-bg-white);
+  color: var(--main-bg-color);
+  padding-bottom: 2px;
+  border: 2px solid var(--main-bg-color);
+  border-radius: 20px;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.survey-btn a:hover {
+  color: var(--main-bg-color);
+  border: 2px solid var(--main-bg-white);
+}
+
+@media(max-width: 375px) {
+  .footer {
+    margin-top: 20px;
+  }
+
+  .survey-btn {
+    margin-top: 20px;
+  }
+}

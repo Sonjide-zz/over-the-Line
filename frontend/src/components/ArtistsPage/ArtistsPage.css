@@ -1,0 +1,46 @@
+.bubble-border-artists {
+  position: absolute;
+  width: 140px !important;
+  height: 140px !important;
+}
+
+.artists-main {
+  height: 100vh !important;
+}
+
+.artists {
+  width: 1200px;
+  flex-wrap: wrap;
+
+}
+
+.artist_bubbles {
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media(max-width: 375px) {
+  .artists-main-categories {
+    margin-top: 60px;
+  }
+
+  .artists {
+    margin-top: 140px;
+
+  }
+
+  .bubble-border-artists {
+    position: absolute;
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .artists-main-product {
+    padding-top: 80px;
+  }
+
+}

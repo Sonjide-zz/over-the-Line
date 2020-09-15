@@ -1,0 +1,170 @@
+version: 2.1
+
+commands:
+  s3deploy_production:
+    description: "Deploy to S3"
+    parameters:
+      to:
+        type: string
+      cf_distribution_id:
+        type: string
+    steps:
+      - run: |
+          aws configure set preview.cloudfront true
+      - run: |
+          aws s3 sync ./frontend/build s3://<< parameters.to >> \
+            --acl public-read --delete \
+            --cache-control max-age=31536000
+      - run: |
+          aws cloudfront create-invalidation \
+              --distribution-id << parameters.cf_distribution_id >> \
+              --paths /\*
+
+jobs:
+  backend_build:
+    working_directory: ~/backend
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: cd backend && npm install
+      - run:
+          name: Lint project
+          command: cd backend && npm run lint
+      - run:
+          name: Set env variables
+          command: cd backend && echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
+      - run:
+          name: Docker build api
+          command: |
+            cd backend && docker build -t $CYF_PRIVATE_REPO/otl-be:$VERSION --build-arg version=$VERSION .
+            docker tag $CYF_PRIVATE_REPO/otl-be:$VERSION $CYF_PRIVATE_REPO/otl-be:latest
+      - run:
+          name: Install some dependencies
+          command: |
+            sudo apt update
+            sudo apt install -y python3 python3-pip python3-setuptools groff
+            sudo pip3 install --upgrade pip
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Docker login to CYF Repo
+          command: $(aws ecr get-login --no-include-email)
+      - run:
+          name: Docker push containers
+          command: |
+            docker push $CYF_PRIVATE_REPO/otl-be
+
+  deploy_backend:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/backend
+    steps:
+      - setup_remote_docker
+      - run:
+          name: Set env variables
+          command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
+      - run:
+          name: Get runner public IP
+          command: echo 'export PUBLIC_IP=$(wget -qO- http://checkip.amazonaws.com)' >> $BASH_ENV
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Whitelist runner public IP
+          command: |
+            aws ec2 authorize-security-group-ingress \
+            --region ${AWS_REGION} \
+            --group-id ${AWS_K8S_MASTER_SG} \
+            --ip-permissions "[{\"IpProtocol\": \"tcp\", \"FromPort\": ${K8S_MASTER_PORT}, \"ToPort\": ${K8S_MASTER_PORT}, \"IpRanges\": [{\"CidrIp\": \"${PUBLIC_IP}/32\", \"Description\":\"${CIRCLE_PROJECT_REPONAME}-${CIRCLE_BUILD_NUM}\"  }]}]"
+      - run:
+          name: Install kubectl
+          command: |
+            curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+            chmod +x kubectl
+      - run:
+          name: Install gnupg
+          command: sudo apt-get -y install gnupg
+      - run:
+          name: Get kubeconfig
+          command: aws s3 cp s3://$SECRETS_BUCKET/kubectl/config_cyfbot.gpg ./config.gpg
+      - run:
+          name: Decrypt kubeconfig and set KUBECONFIG
+          command: gpg --yes --passphrase="$GPG_KEY" config.gpg
+      - run:
+          name: Update k8s deployments
+          command: |
+            KUBECONFIG=$(pwd)/config ./kubectl set image deployment/otl-api otl-api=$CYF_PRIVATE_REPO/otl-be:$VERSION
+      - run:
+          name: Remove runner IP from SG
+          command: |
+            aws ec2 revoke-security-group-ingress \
+              --region ${AWS_REGION} \
+              --group-id ${AWS_K8S_MASTER_SG} \
+              --protocol tcp \
+              --port ${K8S_MASTER_PORT} \
+              --cidr "${PUBLIC_IP}/32"
+
+  frontend_build:
+    docker:
+      - image: circleci/node:8.12.0
+    working_directory: ~/frontend
+    environment:
+      REACT_APP_API: https://api.over-the-line.uk
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/frontend
+      - run: cd frontend && npm install
+      - run: cd frontend && npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - frontend/build
+  deploy_frontend:
+    docker:
+      - image: circleci/python
+    working_directory: ~/frontend/build
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/frontend/build
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - s3deploy_production:
+          to: "over-the-line.uk"
+          cf_distribution_id: "E2N0RA4UHF7AR2"
+workflows:
+  version: 2
+
+  my_workflow:
+    jobs:
+      - backend_build:
+          context: build
+      - deploy_backend:
+          context: deployments
+          requires:
+            - backend_build
+          filters:
+            branches:
+              only:
+                - develop
+      - frontend_build:
+          context: build
+          requires:
+            - backend_build
+            - deploy_backend
+      - deploy_frontend:
+          context: deployments
+          requires:
+            - frontend_build
+            - deploy_backend
+          filters:
+            branches:
+              only:
+                - develop
