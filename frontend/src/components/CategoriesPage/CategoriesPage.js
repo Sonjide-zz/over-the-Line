@@ -21,7 +21,7 @@ export const CategoriesPage = ({
           <Container fluid>
             <Row className="categories">
               {categoriesArray.map((category, index) => (
-                <Col>
+                <Col key={index}>
                   <Link
                     onClick={function () {
                       setCategory(category.title);

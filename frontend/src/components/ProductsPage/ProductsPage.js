@@ -20,7 +20,7 @@ export const ProductsPage = ({ category, artist, setProduct }) => {
                   artist.category
                     .filter((cat) => cat.hasOwnProperty(category))[0]
                     [category].map((product, index) => (
-                      <Col>
+                      <Col key={index}>
                         <Link
                           onClick={() => setProduct(product)}
                           className="bubbles-link-artists"
