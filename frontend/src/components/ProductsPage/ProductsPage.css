@@ -1,7 +1,9 @@
 .bubble-border-products {
     position: absolute;
-    width: 180px !important;
-    height: 180px !important;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    transform: translate(-50%, -50%);
 }
 
 #products-bubbles {
@@ -16,9 +18,23 @@
     justify-content: center;
 }
 
-@media(max-width: 375px) {
+
+@media only screen and (max-width: 768px) {
     .products_bubbles {
         flex-direction: column;
+        padding-top: 5em;
+    }
+
+    .bubble-border-products {
+
+        width: 160px;
+
+    }
+
+    #products-bubbles {
+        width: 130px;
+        height: 130px;
+        margin-top: 30px
     }
 
 }

@@ -27,7 +27,7 @@ function App() {
     )[0][category][0];
   }
   return (
-    <>
+    <div className="App">
       <HomePage setShowCategories={setShowCategories} />
       <CategoriesPage
         setCategory={setCategory}
@@ -66,7 +66,7 @@ function App() {
           />
         )}
       </>
-    </>
+    </div>
   );
 }
 export default App;

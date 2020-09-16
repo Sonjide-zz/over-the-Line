@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Link, Element } from "react-scroll";
 import { classNamePicker } from "../../utils";
-
+import { Container, Row, Col } from "react-bootstrap";
 import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 
 import "../ArtistsPage/ArtistsPage.css";
@@ -30,15 +30,17 @@ export const ArtistsPage = ({
 
   return (
     <>
-      <Element name="artist" />
-      {showArtists ? (
-        <Element name="artist" className="element">
-          <div className="artist-page">
-            <div className="artists-main d-flex justify-content-center align-items-center ">
-              <div className="d-flex justify-content-center align-items-center artists">
-                <div className="artist_bubbles d-flex">
-                  {category &&
-                    filteredArray.map((artist, index) => (
+      <Element name="artist" className="element">
+        {showArtists ? (
+          <Container
+            fluid
+            className={category === "writing" ? "writing-container" : ""}
+          >
+            <Row>
+              <div className="artist_bubbles d-flex">
+                {category &&
+                  filteredArray.map((artist, index) => (
+                    <Col className="bubbles" key={index}>
                       <Link
                         onClick={(e) => setArtist(artist)}
                         className="bubbles-link-artists"
@@ -55,13 +57,13 @@ export const ArtistsPage = ({
                           <BubbleBorder className="bubble-border-artists"></BubbleBorder>
                         </div>
                       </Link>
-                    ))}
-                </div>
+                    </Col>
+                  ))}
               </div>
-            </div>
-          </div>
-        </Element>
-      ) : null}
+            </Row>
+          </Container>
+        ) : null}
+      </Element>
     </>
   );
 };

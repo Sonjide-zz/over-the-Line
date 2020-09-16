@@ -1,46 +1,30 @@
 .bubble-border-artists {
   position: absolute;
-  width: 140px !important;
-  height: 140px !important;
-}
-
-.artists-main {
-  height: 100vh !important;
-}
-
-.artists {
-  width: 1200px;
-  flex-wrap: wrap;
-
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  transform: translate(-50%, -50%);
 }
 
 .artist_bubbles {
   position: relative;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
-@media(max-width: 375px) {
-  .artists-main-categories {
-    margin-top: 60px;
-  }
+@media only screen and (max-width: 768px) {
 
-  .artists {
-    margin-top: 140px;
+  .writing-container {
+    padding-top: 7em !important;
 
+    height: auto;
   }
 
   .bubble-border-artists {
-    position: absolute;
+
     width: 110px !important;
     height: 110px !important;
-  }
-
-}
-
-@media(max-width: 768px) {
-  .artists-main-product {
-    padding-top: 80px;
   }
 
 }
