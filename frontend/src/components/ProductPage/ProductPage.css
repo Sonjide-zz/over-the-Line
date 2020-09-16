@@ -22,11 +22,10 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
   flex-direction: column;
-  /* display: block; */
+
 }
 
 .product-container {
-  display: block;
   padding-left: 10% !important;
   padding-right: 10% !important;
 }
@@ -50,8 +49,8 @@
   }
 
   .product-container {
-    padding-left: 10% !important;
-    padding-right: 10% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
 
   }
 

@@ -53,7 +53,7 @@ export const NavBar = () => {
           </a>
         </Navbar.Brand>
       </Col>
-      <Col xs={{ order: 12 }} lg={{ order: 1 }} md={{ order: 1 }}>
+      <Col xs={{ order: 12 }} lg={{ order: 1 }} sm={{ order: 1 }}>
         <div className={navbarTitleColor}>
           <h1>{navbarTitle}</h1>
         </div>
@@ -63,7 +63,7 @@ export const NavBar = () => {
         className={navbarDonateColor}
         xs={{ order: 1 }}
         lg={{ order: 12 }}
-        md={{ order: 1 }}
+        sm={{ order: 1 }}
       >
         <div>
           <HeartSvg
