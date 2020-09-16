@@ -13,7 +13,7 @@ export const HomePage = ({ setShowCategories }) => {
       <Element name="homepage" />
       <NavBar />
       <Container fluid>
-        <Row>
+        <Row fluid="true" className="home-row">
           <Col lg={12}>
             <h6>
               You have crossed the line and have entered an exciting digital

@@ -71,6 +71,14 @@
   margin-top: 15px;
 }
 
+.navbar {
+  padding: 0 !important;
+}
+
+.text {
+  opacity: 0;
+}
+
 .donate-link-white a:hover {
   color: var(--main-white);
   transform: scale(1.1);
@@ -81,35 +89,16 @@
 
 
 
-@media(max-width: 320px) {
+@media only screen and (max-width: 768px) {
 
-  .text-scroll h1 {
-    font-size: 20px;
-    color: var(--main-white);
-    margin-top: 10px;
-  }
-
-  .logo {
-    width: 100px;
-    height: 60px;
-  }
-
-  .donate-link-red {
-    color: var(--main-black);
-    padding: 2px;
-    font-size: 13px;
-    padding: 0px !important;
-  }
-
-
-
-}
-
-@media(max-width: 768px) {
 
   .text-scroll h1 {
     font-size: 24px;
+    width: 100%;
   }
 
-
+  .logo {
+    width: 150px;
+    height: 60px;
+  }
 }

@@ -46,8 +46,8 @@ export const NavBar = () => {
             <img
               alt="Logo"
               src={logos}
-              width="150"
-              height="100"
+              width="170"
+              height="80"
               className="d-inline-block align-top logo"
             />
           </a>

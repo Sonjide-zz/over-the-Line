@@ -30,9 +30,8 @@ export const ArtistsPage = ({
 
   return (
     <>
-      <Element name="art" />
-      {showArtists ? (
-        <Element name="artist" className="element">
+      <Element name="artist" className="element">
+        {showArtists ? (
           <Container
             fluid
             className={category === "writing" ? "writing-container" : ""}
@@ -63,8 +62,8 @@ export const ArtistsPage = ({
               </div>
             </Row>
           </Container>
-        </Element>
-      ) : null}
+        ) : null}
+      </Element>
     </>
   );
 };

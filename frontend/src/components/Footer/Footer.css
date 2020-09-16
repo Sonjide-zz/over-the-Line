@@ -3,7 +3,8 @@
   background-color: var(--main-white);
   display: flex;
   justify-content: center;
-  height: 200px;
+  flex-grow: 1;
+  height: 140px;
 }
 
 
@@ -45,6 +46,9 @@
   box-shadow: none !important;
 }
 
+.footer-main {
+  flex-grow: 1;
+}
 
 
 .social-list {
@@ -89,9 +93,9 @@
   color: var(--main-bg-color);
 }
 
-@media(max-width: 375px) {
+@media only screen and (max-width: 768px) {
   .footer {
-    margin-top: 15em;
+    margin-top: 5em;
   }
 
   .survey-btn {
@@ -100,5 +104,9 @@
 
   .copyFooter {
     margin-top: 20px;
+  }
+
+  .footer {
+    height: 250px;
   }
 }

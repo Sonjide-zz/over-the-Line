@@ -15,11 +15,11 @@ export const CategoriesPage = ({
 }) => {
   return (
     <>
-      {/* <Element name="art" /> */}
+      <Element name="art" />
       {showCategories ? (
-        <Element name="artists" className="element">
+        <Element name="categories" className="element">
           <Container fluid>
-            <Row>
+            <Row className="categories">
               {categoriesArray.map((category, index) => (
                 <Col>
                   <Link

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Row, Col, Dropdown } from "react-bootstrap";
+import { Row, Col, Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -13,8 +13,8 @@ import "../Footer/Footer.css";
 export const Footer = () => {
   return (
     <>
-      <div className="section-line"></div>
       <footer className="footer d-flex flex-column justify-content-center ">
+        <div className="section-line"></div>
         <Row>
           <Col lg={4} sm={12} className="footer-links">
             <ul className="d-flex justify-content-center">
