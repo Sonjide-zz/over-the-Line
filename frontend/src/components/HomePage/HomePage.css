@@ -1,9 +1,9 @@
 .homepage {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 20px; */
-  margin-left: 30px;
+
 }
 
 .container-fluid {
@@ -64,17 +64,6 @@
   }
 }
 
-@media (max-width: 320px) {
-  #videoBG {
-    width: auto;
-    height: auto;
-  }
-
-  .text h1 {
-    font-size: 24px;
-  }
-}
-
 @media (max-width: 768px) {
   #videoBG {
     width: auto;
@@ -82,17 +71,6 @@
   }
 
   .homepage {
-    margin-top: 40%;
-  }
-}
-
-@media (max-width: 1024px) {
-  #videoBG {
-    width: auto;
-    height: auto;
-  }
-
-  .homepage {
-    margin-top: 40%;
+    margin-bottom: 100px;
   }
 }
