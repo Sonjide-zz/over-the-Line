@@ -8,12 +8,7 @@ import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 
 import "../ProductsPage/ProductsPage.css";
 
-export const ProductsPage = ({
-  category,
-  artist,
-  setProduct,
-  singleProductCheck,
-}) => {
+export const ProductsPage = ({ category, artist, setProduct }) => {
   return (
     <>
       {category ? (

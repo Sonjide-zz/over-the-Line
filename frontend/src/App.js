@@ -47,7 +47,6 @@ function App() {
             category={category}
             artist={artist}
             setProduct={setProduct}
-            singleProductCheck={singleProductCheck}
           />
         )}
       </>
