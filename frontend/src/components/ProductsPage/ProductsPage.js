@@ -16,7 +16,7 @@ export const ProductsPage = ({
 }) => {
   return (
     <>
-      {category && singleProductCheck >= 1 ? (
+      {category ? (
         <Element name="products" className="element">
           <Container fluid>
             <Row>
