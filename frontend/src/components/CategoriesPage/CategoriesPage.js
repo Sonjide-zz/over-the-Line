@@ -18,8 +18,14 @@ export const CategoriesPage = ({
       <Element name="art" />
       {showCategories ? (
         <Element name="categories" className="element">
-          <Container fluid>
-            <Row className="categories">
+          <Container fluid className="categories">
+            <h5>
+              You have crossed the line and have entered an exciting digital
+              exhibition of creative work made by young refugees and asylum
+              seekers.
+            </h5>
+
+            <Row>
               {categoriesArray.map((category, index) => (
                 <Col key={index}>
                   <Link

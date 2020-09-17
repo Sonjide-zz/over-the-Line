@@ -8,10 +8,15 @@ import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 
 import "../ProductsPage/ProductsPage.css";
 
-export const ProductsPage = ({ category, artist, setProduct }) => {
+export const ProductsPage = ({
+  category,
+  artist,
+  setProduct,
+  singleProductCheck,
+}) => {
   return (
     <>
-      {category ? (
+      {category && singleProductCheck >= 1 ? (
         <Element name="products" className="element">
           <Container fluid>
             <Row>

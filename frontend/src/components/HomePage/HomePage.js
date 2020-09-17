@@ -14,13 +14,6 @@ export const HomePage = ({ setShowCategories }) => {
       <NavBar />
       <Container fluid>
         <Row fluid="true" className="home-row">
-          <Col lg={12}>
-            <h6>
-              You have crossed the line and have entered an exciting digital
-              exhibition of creative work made by young refugees and asylum
-              seekers.
-            </h6>
-          </Col>
           <Col>
             <div
               className="homepage"
