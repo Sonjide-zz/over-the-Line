@@ -135,9 +135,9 @@ export const Footer = () => {
             </div>
           </Col>
           <Col lg={12} className="copyFooter">
-            <div>&copy;Copyright Compass Collective</div>
+            <div>&copy;Compass Collective</div>
             <div>
-              Created by{" "}
+              Build by{" "}
               <a href="https://codeyourfuture.io/" target="_blanck">
                 CodeYourFuture
               </a>{" "}
