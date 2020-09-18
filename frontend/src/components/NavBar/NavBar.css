@@ -90,8 +90,6 @@
 
 
 @media only screen and (max-width: 768px) {
-
-
   .text-scroll h1 {
     font-size: 24px;
     width: 100%;
@@ -102,4 +100,16 @@
     height: 60px;
   }
 
+}
+
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .text-scroll h1 {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .logo {
+    width: 200px;
+    height: 60px;
+  }
 }

@@ -42,7 +42,9 @@ export const ArtistsPage = ({
                   filteredArray.map((artist, index) => (
                     <Col className="bubbles" key={index}>
                       <Link
-                        onClick={(e) => setArtist(artist)}
+                        onClick={(e) => {
+                          setArtist(artist);
+                        }}
                         className="bubbles-link-artists"
                         activeClass="active"
                         to={singleProductCheck !== 1 ? "products" : "product"}

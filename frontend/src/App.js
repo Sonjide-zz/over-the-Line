@@ -34,6 +34,7 @@ function App() {
         showCategories={showCategories}
         setShowArtists={setShowArtists}
       />
+
       <ArtistsPage
         category={category}
         setArtist={setArtist}
