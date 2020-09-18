@@ -14,7 +14,7 @@ export const CategoriesPage = ({
   return (
     <>
       <Element name="art" />
-      {showCategories ? (
+      {showCategories && (
         <Element name="artists" className="element">
           <div>
             <div className="artists-main-categories">
@@ -42,7 +42,7 @@ export const CategoriesPage = ({
             </div>
           </div>
         </Element>
-      ) : null}
+      )}
     </>
   );
 };
