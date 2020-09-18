@@ -15,7 +15,6 @@
 }
 
 
-
 /* multiple-artist page */
 
 .element {
@@ -142,6 +141,15 @@
   margin-bottom: 10px;
 }
 
+.container-fluid {
+  padding-top: 5em;
+  padding-left: 5em !important;
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -161,7 +169,11 @@
   html,
   body {
     width: 100% !important;
+  }
 
+  .container-fluid {
+    padding-top: 0em;
+    padding-left: 10px !important;
   }
 
 
