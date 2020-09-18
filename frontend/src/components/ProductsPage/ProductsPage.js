@@ -7,10 +7,16 @@ import { ReactComponent as BubbleBorder } from "../../assets/bubble.svg";
 
 import "../ProductsPage/ProductsPage.css";
 
-export const ProductsPage = ({ category, artist, setProduct }) => {
+export const ProductsPage = ({
+  category,
+  artist,
+  setProduct,
+  singleProductCheck,
+}) => {
   return (
     <>
-      {category ? (
+      <Element name="products" />
+      {singleProductCheck > 1 ? (
         <Element name="products" className="element">
           <div className="artist-page">
             <div className="artists-main d-flex justify-content-center align-items-center">

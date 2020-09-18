@@ -8,15 +8,12 @@ import PropTypes from "prop-types";
 import { BackToTop } from "../BackToTop/BackToTop";
 import "./ProductPage.css";
 
-export const ProductPage = ({
-  product,
-  artist,
-  category,
-  singleProductCheck,
-}) => {
+export const ProductPage = ({ product, artist, singleProductCheck }) => {
+  console.log(product);
   return (
     <>
-      {singleProductCheck >= 1 ? (
+      <Element name="product" />
+      {Object.entries(product).length !== 0 && (
         <Element name="product" className="element">
           <div className="artist-page">
             <div className="artists-main-products d-flex flex-column justify-content-center align-items-center">
@@ -72,7 +69,7 @@ export const ProductPage = ({
             </div>
           </div>
         </Element>
-      ) : null}
+      )}
     </>
   );
 };

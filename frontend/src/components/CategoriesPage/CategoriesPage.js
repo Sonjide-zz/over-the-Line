@@ -35,10 +35,7 @@ export const CategoriesPage = ({
                 >
                   <div className={category.color} id={category.color}>
                     {category.title} room
-                    <BubbleBorder
-                      title="bubble-border"
-                      className="bubble-border"
-                    ></BubbleBorder>
+                    <BubbleBorder className="bubble-border"></BubbleBorder>
                   </div>
                 </Link>
               ))}

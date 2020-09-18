@@ -27,11 +27,10 @@ export const ArtistsPage = ({
   let filteredArray = artists.filter((artist) =>
     artist.category.some((cat) => cat[category] && cat[category].length > 0)
   );
-
   return (
     <>
       <Element name="artist" />
-      {showArtists ? (
+      {showArtists && (
         <Element name="artist" className="element">
           <div className="artist-page">
             <div className="artists-main d-flex justify-content-center align-items-center ">
@@ -59,7 +58,7 @@ export const ArtistsPage = ({
             </div>
           </div>
         </Element>
-      ) : null}
+      )}
     </>
   );
 };
