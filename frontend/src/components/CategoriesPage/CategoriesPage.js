@@ -16,7 +16,7 @@ export const CategoriesPage = ({
   return (
     <>
       <Element name="art" />
-      {showCategories ? (
+      {showCategories && (
         <Element name="categories" className="element">
           <Container fluid className="categories">
             <h5>
@@ -52,7 +52,7 @@ export const CategoriesPage = ({
             </Row>
           </Container>
         </Element>
-      ) : null}
+      )}
     </>
   );
 };

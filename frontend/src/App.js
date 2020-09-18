@@ -42,13 +42,12 @@ function App() {
         showArtists={showArtists}
       />
       <>
-        {singleProductCheck !== 1 && (
-          <ProductsPage
-            category={category}
-            artist={artist}
-            setProduct={setProduct}
-          />
-        )}
+        <ProductsPage
+          category={category}
+          artist={artist}
+          setProduct={setProduct}
+          singleProductCheck={singleProductCheck}
+        />
       </>
       <>
         {singleProductCheck !== 1 ? (

@@ -7,10 +7,11 @@ import PropTypes from "prop-types";
 import { BackToTop } from "../BackToTop/BackToTop";
 import "./ProductPage.css";
 
-export const ProductPage = ({ product, artist, singleProductCheck }) => {
+export const ProductPage = ({ product, artist }) => {
   return (
     <>
-      {singleProductCheck >= 1 ? (
+      <Element name="product" />
+      {Object.entries(product).length !== 0 && (
         <Element name="product" className="element">
           {Object.entries(product).length !== 0 && (
             <div className="container-product">
@@ -59,7 +60,7 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
             </div>
           )}
         </Element>
-      ) : null}
+      )}
     </>
   );
 };
@@ -67,5 +68,4 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
 ProductPage.propTypes = {
   product: PropTypes.object,
   artist: PropTypes.object,
-  singleProductCheck: PropTypes.number,
 };

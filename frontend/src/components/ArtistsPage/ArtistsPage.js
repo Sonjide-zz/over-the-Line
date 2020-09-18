@@ -27,11 +27,10 @@ export const ArtistsPage = ({
   let filteredArray = artists.filter((artist) =>
     artist.category.some((cat) => cat[category] && cat[category].length > 0)
   );
-
   return (
     <>
       <Element name="artist" className="element">
-        {showArtists ? (
+        {showArtists && (
           <Container
             fluid
             className={category === "writing" ? "writing-container" : ""}
@@ -64,7 +63,7 @@ export const ArtistsPage = ({
               </div>
             </Row>
           </Container>
-        ) : null}
+        )}
       </Element>
     </>
   );
