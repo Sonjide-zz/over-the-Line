@@ -34,6 +34,18 @@
   text-decoration: none !important;
 }
 
+.dropdown-menu {
+  border: none !important;
+}
+
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.Select-option.is-hover {
+  background-color: rgba(1, 198, 136, 0.15) !important;
+}
+
 #dropdown-basic {
   background-color: transparent !important;
   border: none !important;
