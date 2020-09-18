@@ -14,7 +14,10 @@
   text-align: center;
 }
 
-
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
 /* multiple-artist page */
 

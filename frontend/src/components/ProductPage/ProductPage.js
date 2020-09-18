@@ -15,7 +15,7 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
           {Object.entries(product).length !== 0 && (
             <div className="container-product">
               <Row className="product-container">
-                <Col lg={8} xs={12} md={12}>
+                <Col lg={8} xs={12} md={12} className="video-writing-div">
                   <div>
                     {product.type === "text" ? (
                       <div

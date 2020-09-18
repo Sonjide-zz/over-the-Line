@@ -30,9 +30,6 @@
   padding-right: 10% !important;
 }
 
-.product-row {
-  width: 100% !important;
-}
 
 .back-btn {
   padding-top: 20px;
@@ -59,4 +56,22 @@
     padding-top: 10em;
   }
 
+  .video-writing-div {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+}
+
+@media only screen and (device-width: 1024px) and (device-height: 1366px) {
+  .product-container {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    height: 80vh;
+    align-items: center;
+  }
+
+  .footer {
+    height: 200px;
+  }
 }
