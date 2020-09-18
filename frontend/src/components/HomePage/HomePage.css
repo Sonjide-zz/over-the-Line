@@ -1,8 +1,17 @@
 .homepage {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+}
+
+.container-fluid {
+  height: 80vh;
+}
+
+.home-row {
+  width: 100%;
 }
 
 .h1-over-the-line {
@@ -51,40 +60,17 @@
 @media (min-aspect-ratio: 16/9) {
   #videoBG {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
   }
 }
 
-@media (max-aspect-ratio: 16/9) {
-  #videoBG {
-    width: auto;
-    height: 768px;
-  }
-
-  .homepage {
-    margin-top: 150px;
-  }
-}
-
-@media(max-width: 375px) {
+@media (max-width: 768px) {
   #videoBG {
     width: auto;
     height: auto;
-    margin-bottom: 200px;
-    margin-left: 10px;
   }
 
-  .text h1 {
-    font-size: 24px;
-  }
-
-
-}
-
-@media(max-width: 768px) {
   .homepage {
-    margin-top: 170px;
+    margin-bottom: 100px;
   }
-
-
 }

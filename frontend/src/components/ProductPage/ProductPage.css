@@ -1,11 +1,3 @@
-.artist-name {
-  height: 100px;
-}
-
-.artist-info {
-  height: 500px;
-}
-
 .product-writing {
   width: 100%;
   height: 400px;
@@ -13,74 +5,86 @@
   border: 1px solid var(--main-bg-color);
   padding: 20px;
   background-color: var(--main-white);
-}
-
-.back-to-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+  text-align: left;
 }
 
 .product-container-info {
   height: 400px;
-  border: 1px solid red;
+  width: 100%;
+  border: 1px solid var(--main-bg-color);
   padding: 20px;
   background-color: var(--main-white);
+  text-align: left;
+  overflow: auto;
 }
 
-.artist-page {
-  height: 100vh;
+.container-product {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  flex-direction: column;
+
 }
 
 .product-container {
-  height: 85vh;
-  padding-top: 30px;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
 }
 
-.col-lg-8 {
-  padding-left: 0px !important;
+
+.back-btn {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-@media (max-width: 375px) {
-  .back-btn {
-    margin-top: 120px !important;
-  }
 
-  .product-container {
-    margin-top: 10rem;
-  }
-
-  .product-container-info {
-    height: 400px;
-  }
-}
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .product-container-info {
     margin-top: 20px;
   }
 
-  .col-lg-8 {
+  .back-btn {
+    padding-top: 10px;
+  }
+
+  .product-container {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .container-product {
+    display: block;
+    padding-top: 10em;
+  }
+
+  .video-writing-div {
     padding-right: 0px !important;
     padding-left: 0px !important;
   }
 
-  .back-btn {
-    margin-top: 40px;
-  }
+}
 
+@media only screen and (device-width: 1024px) and (device-height: 1366px) {
   .product-container {
-    height: 85vh;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    height: 80vh;
+    align-items: center;
   }
 
-  .product {
-    padding-top: 50px;
+  .footer {
+    height: 200px;
   }
 }
 
-@media (max-width: 1440px) {
+@media only screen and (device-width: 1920px) and (device-height: 1080px) {
   .product-container {
-    height: 80vh;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    height: 70vh;
+    align-items: center;
+  }
+
+  .footer {
+    height: 200px;
   }
 }

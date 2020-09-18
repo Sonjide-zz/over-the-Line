@@ -27,13 +27,14 @@ function App() {
     )[0][category][0];
   }
   return (
-    <>
+    <div className="App">
       <HomePage setShowCategories={setShowCategories} />
       <CategoriesPage
         setCategory={setCategory}
         showCategories={showCategories}
         setShowArtists={setShowArtists}
       />
+
       <ArtistsPage
         category={category}
         setArtist={setArtist}
@@ -41,13 +42,12 @@ function App() {
         showArtists={showArtists}
       />
       <>
-        {singleProductCheck !== 1 && (
-          <ProductsPage
-            category={category}
-            artist={artist}
-            setProduct={setProduct}
-          />
-        )}
+        <ProductsPage
+          category={category}
+          artist={artist}
+          setProduct={setProduct}
+          singleProductCheck={singleProductCheck}
+        />
       </>
       <>
         {singleProductCheck !== 1 ? (
@@ -66,7 +66,7 @@ function App() {
           />
         )}
       </>
-    </>
+    </div>
   );
 }
 export default App;

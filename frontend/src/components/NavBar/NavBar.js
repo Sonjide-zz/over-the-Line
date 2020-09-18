@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import logo2 from "../../assets/logo2.png";
+import { Col } from "react-bootstrap";
 import { ReactComponent as HeartSvg } from "../../assets/heart-regular.svg";
 
 import "./NavBar.css";
@@ -39,38 +40,49 @@ export const NavBar = () => {
 
   return (
     <Navbar className={navbarColor} sticky="top" expand="md">
-      <Navbar.Brand className="" id="logo">
-        <a href="/" title="OVER THE LINE">
-          <img
-            alt="Logo"
-            src={logos}
-            width="130"
-            height="60"
-            className="d-inline-block align-top logo"
-          />
-        </a>
-      </Navbar.Brand>
-      <div className={navbarTitleColor}>
-        <h1>{navbarTitle}</h1>
-      </div>
+      <Col>
+        <Navbar.Brand id="logo">
+          <a href="/" title="OVER THE LINE">
+            <img
+              alt="Logo"
+              src={logos}
+              width="170"
+              height="80"
+              className="d-inline-block align-top logo"
+            />
+          </a>
+        </Navbar.Brand>
+      </Col>
+      <Col xs={{ order: 12 }} lg={{ order: 1 }} sm={{ order: 1 }}>
+        <div className={navbarTitleColor}>
+          <h1>{navbarTitle}</h1>
+        </div>
+      </Col>
 
-      <div className={navbarDonateColor}>
-        <HeartSvg
-          className={heart}
-          alt="heart"
-          width="30"
-          height="30"
-          fill="green"
-        />
-        <a
-          href="https://www.compasscollect.com/donate"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Donate"
-        >
-          DONATE
-        </a>
-      </div>
+      <Col
+        className={navbarDonateColor}
+        xs={{ order: 1 }}
+        lg={{ order: 12 }}
+        sm={{ order: 1 }}
+      >
+        <div>
+          <HeartSvg
+            className={heart}
+            alt="heart"
+            width="30"
+            height="30"
+            fill="green"
+          />
+          <a
+            href="https://www.compasscollect.com/donate"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Donate"
+          >
+            DONATE
+          </a>
+        </div>
+      </Col>
     </Navbar>
   );
 };

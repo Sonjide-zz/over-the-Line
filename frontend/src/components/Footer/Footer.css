@@ -1,13 +1,13 @@
 .footer {
   width: 100% !important;
   background-color: var(--main-white);
-
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  height: 140px;
 }
 
-.footer-links {
-  margin-top: 10px;
 
-}
 
 .footer-links ul {
   margin: 0px;
@@ -34,6 +34,18 @@
   text-decoration: none !important;
 }
 
+.dropdown-menu {
+  border: none !important;
+}
+
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.Select-option.is-hover {
+  background-color: rgba(1, 198, 136, 0.15) !important;
+}
+
 #dropdown-basic {
   background-color: transparent !important;
   border: none !important;
@@ -46,16 +58,17 @@
   box-shadow: none !important;
 }
 
-.social {
-  margin-top: 30px;
+.footer-main {
+  flex-grow: 1;
 }
+
 
 .social-list {
   padding: 0px;
 }
 
 .social li {
-  padding-left: 10px;
+  padding-left: 20px;
   list-style-type: none;
 }
 
@@ -64,7 +77,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 }
 
 .survey-btn a {
@@ -83,12 +95,34 @@
   border: 2px solid var(--main-bg-white);
 }
 
-@media(max-width: 375px) {
+.copyFooter a {
+  color: var(--main-black);
+  text-decoration: none !important;
+
+}
+
+.copyFooter a:hover {
+  color: var(--main-bg-color);
+}
+
+
+
+@media only screen and (max-width: 768px) {
   .footer {
-    margin-top: 20px;
+    margin-top: 5em;
   }
 
   .survey-btn {
     margin-top: 20px;
   }
+
+  .copyFooter {
+    margin-top: 20px;
+  }
+
+  .footer {
+    height: 250px;
+  }
+
+
 }
