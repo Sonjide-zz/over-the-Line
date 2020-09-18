@@ -178,3 +178,9 @@
 
 
 }
+
+@media only screen and (device-width: 1920px) and (device-height: 1080px) {
+  .section-line {
+    margin-bottom: 60px;
+  }
+}

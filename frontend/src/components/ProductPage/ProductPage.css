@@ -75,3 +75,16 @@
     height: 200px;
   }
 }
+
+@media only screen and (device-width: 1920px) and (device-height: 1080px) {
+  .product-container {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    height: 70vh;
+    align-items: center;
+  }
+
+  .footer {
+    height: 200px;
+  }
+}
