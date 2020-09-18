@@ -27,7 +27,7 @@ export const CategoriesPage = ({
 
             <Row>
               {categoriesArray.map((category, index) => (
-                <Col key={index}>
+                <Col xs={6} lg={4} md={4} key={index}>
                   <Link
                     onClick={function () {
                       setCategory(category.title);

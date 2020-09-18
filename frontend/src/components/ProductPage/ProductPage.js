@@ -49,7 +49,7 @@ export const ProductPage = ({ product, artist, singleProductCheck }) => {
                   <div className="artist-info">{artist.bio}</div>
                 </Col>
 
-                <Col lg={12} sm={12}>
+                <Col>
                   <div className="d-flex justify-content-center back-btn">
                     <BackToTop />
                   </div>

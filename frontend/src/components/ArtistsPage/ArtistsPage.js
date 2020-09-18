@@ -40,7 +40,7 @@ export const ArtistsPage = ({
               <div className="artist_bubbles d-flex">
                 {category &&
                   filteredArray.map((artist, index) => (
-                    <Col className="bubbles" key={index}>
+                    <Col xs={4} lg={2} md={2} className="bubbles" key={index}>
                       <Link
                         onClick={(e) => {
                           setArtist(artist);

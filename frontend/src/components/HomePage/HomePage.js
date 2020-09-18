@@ -13,7 +13,7 @@ export const HomePage = ({ setShowCategories }) => {
       <Element name="homepage" />
       <NavBar />
       <Container fluid>
-        <Row fluid="true" className="home-row">
+        <Row className="home-row">
           <Col>
             <div
               className="homepage"

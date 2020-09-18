@@ -32,7 +32,8 @@
 
 
 .back-btn {
-  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 
@@ -48,7 +49,6 @@
   .product-container {
     padding-left: 5% !important;
     padding-right: 5% !important;
-
   }
 
   .container-product {
