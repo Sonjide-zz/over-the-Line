@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .container-fluid {
@@ -74,11 +73,17 @@
   }
 }
 
-@media only screen and (device-width: 1920px) and (device-height: 1080px) {
+@media only screen and (device-width: 1920px) and (max-device-height: 1080px) {
   .section-line {
     margin-bottom: 60px;
   }
 
+  #videoBG {
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1300px) {
   #videoBG {
     width: 100%;
     height: 100vh;
