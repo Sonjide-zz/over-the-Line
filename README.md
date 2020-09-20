@@ -52,7 +52,7 @@ docker-compose up
 
 ### Team members
 
-- Project manager - [Sonjide Hussain] (https://github.com/Sonjide)
+- Project manager - [Sonjide Hussain](https://github.com/Sonjide)
 - Front-End Developer - [Alexandru Budaca](https://github.com/AlexandruBudaca)
 - Front-End Developer - [Alexey Brambalov](https://github.com/AlexeyBrambalov)
 - Back-end Developer - [Serkan Cavus](https://github.com/SCavus)
